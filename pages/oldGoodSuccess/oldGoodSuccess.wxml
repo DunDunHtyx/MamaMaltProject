@@ -1,0 +1,113 @@
+<!-- 商品订单详情页 -->
+<view>
+    <!-- 商品信息 -->
+    <view id="OldGoodInfoModule">
+        <view>
+            <view id="oldGoodInfoBox">
+                <image id="oldGoodImage" src="{{orderInfo.goodImage}}" mode="" />
+                <view id="oldGoodBasicBox">
+                    <view id="oldGoodTitle">{{orderInfo.goodTitle}}</view>
+                    <view id="oldGoodPrtice">￥{{orderInfo.goodPrtice}}</view>
+                </view>
+                <view id="oldGoodBuyState" style="display: {{orderInfo.GoodsTransportState==0?'block':'none'}};">待发货</view>
+                <view id="oldGoodBuyState" style="display: {{orderInfo.GoodsTransportState==1?'block':'none'}};">待收货</view>
+                <view id="oldGoodBuyState" style="display: {{orderInfo.GoodsTransportState==2?'block':'none'}};">已签收</view>
+                <view id="oldGoodBuyState" style="display: {{orderInfo.GoodsTransportState==3?'block':'none'}};">交易完成</view>
+                <view id="oldGoodBuyState" style="display: {{orderInfo.BuyGoodsState==2?'block':'none'}};">退款中</view>
+                <view id="oldGoodBuyState" style="display: {{orderInfo.BuyGoodsState==3?'block':'none'}};">退款成功</view>
+            </view>
+        </view>
+        <view id="oldGoodBasicPrtice">
+            <view style="height: 20rpx;"></view>
+            <view class="oldGoodPrticeItem">
+                <view id="oldGoodTitlePrticeText">商品总价</view>
+                <view id="oldGoodTitlePrtice">￥{{orderInfo.totalPrtice}}</view>
+            </view>
+            <view class="oldGoodPrticeItem">
+                <view id="oldGoodFreightText">运费</view>
+                <view id="oldGoodFright">￥{{orderInfo.freight}}</view>
+            </view>
+            <view class="oldGoodPrticeItem">
+                <view id="oldGoodActuallyText">实付款</view>
+                <view id="oldGoodActuallt">￥{{orderInfo.finallPrtice}}</view>
+            </view>
+            <view style="height: 20rpx;"></view>
+        </view>
+    </view>
+
+    <!-- 收货地址 -->
+    <view id="shipmentsBox">
+        <view id="shipmentTitle">收货地址</view>
+        <view id="shipmentInfo">
+            <view id="shipment_one">{{orderInfo.ReceiptName+orderInfo.ReceiptPhone}}</view>
+            <view id="shipment_two">{{orderInfo.ReceiptAddress+orderInfo.ReceiptDetailAddress}}</view>
+        </view>
+    </view>
+
+    <!-- 邮寄单号信息 -->
+    <view id="shipmentsBox">
+        <view id="shipmentTitle">快递信息</view>
+        <view id="TrackingInfoBox">
+            <view class="TrackingItem_one">
+                <view class="TrackingItem_Textone">快递公司:</view>
+                <view class="TrackingItem_Texttwo">{{orderInfo.CourierCompanies}}</view>
+            </view>
+            <view class="TrackingItem_two">
+                <view class="TrackingItem_Textone">快递单号:</view>
+                <view class="TrackingItem_Texttwo">{{orderInfo.TrackingNumber}}</view>
+            </view>
+        </view>
+    </view>
+
+    <!-- 订单信息 -->
+    <view id="orderBasicInfo">
+        <view id="orderTopBox">
+            <view id="orderTop_title">订单信息</view>
+            <view id="orderTop_call" bindtap="phoneBusser" style="display: {{goPageType==2?'block':'none'}};">
+                <view id="orderTop_callText">联系卖家</view>
+            </view>
+        </view>
+        <view id="orderButtomBox">
+            <!-- 卖家昵称 -->
+            <view class="orderButtomItem" style="display: {{goPageType==2?'flex':'none'}};">
+                <view class="orderButtom_one">卖家昵称:</view>
+                <view class="orderButtom_two">{{orderInfo.userName}}</view>
+            </view>
+            <!-- 买家昵称 -->
+            <view class="orderButtomItem" style="display: {{goPageType==1?'flex':'none'}};">
+                <view class="orderButtom_one">买家昵称:</view>
+                <view class="orderButtom_two">{{orderInfo.BuyersInfo[0].userName}}</view>
+            </view>
+            <!-- 拍下时间 -->
+            <view class="orderButtomItem">
+                <view class="orderButtom_one">拍下时间:</view>
+                <view class="orderButtom_two">{{orderInfo.auctionTime}}</view>
+            </view>
+            <!-- 付款时间 -->
+            <view class="orderButtomItem">
+                <view class="orderButtom_one">付款时间:</view>
+                <view class="orderButtom_two">{{orderInfo.BuyTime}}</view>
+            </view>
+            <!-- 发货时间 -->
+            <view class="orderButtomItem">
+                <view class="orderButtom_one">发货时间:</view>
+                <view class="orderButtom_two">{{orderInfo.shipmentsTime}}</view>
+            </view>
+        </view>
+        <view style="height:10rpx;"></view>
+    </view>
+
+    <!-- 选项按钮 -->
+    <view id="shocieButtonBox">
+        <!-- 返回首页 -->
+        <view class="ButtonItem" style="background-color: #F0B775;" bindtap="goBackIndex">
+            <view class="ButtonText" style="color: white;">返回首页</view>
+        </view>
+        <!-- 填写单号 -->
+        <view class="ButtonItem" style="  display: {{(orderInfo.BuyGoodsState==1&&orderInfo.GoodsTransportState==0&&goPageType==1)?'block':'none'}};   background-color: #F54EA2;" bindtap="writeTrackingNumber">
+            <view class="ButtonText" style="color: white;">填写单号</view>
+        </view>
+    </view>
+    <view style="height: 80rpx;"></view>
+
+</view>

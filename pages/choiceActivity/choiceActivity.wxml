@@ -1,0 +1,33 @@
+<view>
+  <!-- 搜索框 -->
+  <view class="searchBox">
+    <view class="search_one">
+      <image class="searchOne_icon" src="/image/search.png"></image>
+      <input class="searchOne_input" bindinput="getInput" type="text" placeholder="搜索关键字查找关联活动" />
+    </view>
+    <view class="search_two" bindtap="findAct">
+      搜索
+    </view>
+  </view>
+  <!-- 搜索到的活动 -->
+  <view class="ContentBox">
+    <view class="showText">当前在售</view>
+    <!-- 活动内容 -->
+    <view class="ActContentBox">
+      <!-- 具体活动内容 -->
+        <view class="ActDetalBox" wx:for="{{findContent}}" wx:key="index" bindtap="goPublishWonder" data-ActID="{{item._id}}">
+          <image class="ActImage"  src="{{item.activityImage}}"></image>
+          <view class="ActInformationBox">
+            <view class="ActTitles" wx:if="{{item.activityTheme.length<21}}">{{item.activityTheme}} </view>
+            <view class="ActTitle" wx:if="{{item.activityTheme.length>21}}" >{{item.activityTheme}} </view>
+            <view class="ActOneBOx">
+                <view class="ActTimes"  wx:if="{{item.activityTheme.length<21}}">{{item.activityDate}}-{{item.activityEndTime}}</view>
+                <view class="ActAddresss"  wx:if="{{item.activityTheme.length<21}}">{{item.activityToTalAddress}}</view>
+                <view class="ActTime" wx:if="{{item.activityTheme.length>21}}">{{item.activityDate}}-{{item.activityEndTime}}</view>
+                <view class="ActAddress" wx:if="{{item.activityTheme.length>21}}">{{item.activityToTalAddress}}</view>
+            </view>
+          </view>
+        </view>
+    </view>
+  </view>
+</view>

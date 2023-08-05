@@ -1,0 +1,276 @@
+@font-face {
+  font-family: AlibabaPuHuiTi-2-55-Regular;
+  src: url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.eot) format('embedded-opentype'),
+    url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.otf) format('opentype'),
+    url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.ttf) format('TrueType'),
+    url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.woff) format('woff'),
+    url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: AlibabaPuHuiTi-2-45-Light;
+  src: url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.eot) format('embedded-opentype'),
+    url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.otf) format('opentype'),
+    url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.ttf) format('TrueType'),
+    url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.woff) format('woff'),
+    url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.woff2) format('woff2');
+}
+
+
+page {
+  width: 100%;
+  height: 100%;
+}
+
+/* 活动信息 */
+#activityBox {
+    height: 200rpx;
+    background-color: #a0c776;
+    border: 1px solid #a0c776;
+}
+
+#activityTitle {
+  color: white;
+  font-size: 36rpx;
+  letter-spacing: 4rpx;
+  margin-top: 35rpx;
+  margin-left: 25rpx;
+  font-family:AlibabaPuHuiTi-2-45-Light ;
+}
+
+#activityAddress {
+  color: white;
+  margin-top: 5rpx;
+  margin-left: 25rpx;
+  font-size: 30rpx;
+  letter-spacing: 4rpx;
+  font-weight: AlibabaPuHuiTi-2-45-Light;
+}
+
+#BoxTwo {
+    border: 1px solid white;
+    border-radius: 20rpx 20rpx 0 0;
+    margin-top: -20rpx;
+    background-color: white;
+}
+
+/* 场次 */
+#TimeBox {
+  margin-top: 20rpx;
+}
+
+#TimeBox_one {
+  font-size: 34rpx;
+  letter-spacing: 4rpx;
+  padding-left: 20rpx;
+  display: flex;
+}
+
+#TimeBox_one_text {
+  font-weight: 600;
+  font-size: 40rpx;
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  font-family: AlibabaPuHuiTi-2-45-Light;
+}
+
+#TimeBox_one_notice {
+  font-size: 30rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  letter-spacing: 8rpx;
+  font-family: AlibabaPuHuiTi-2-45-Light;
+}
+
+#TimeBox_two {
+    display: flex;
+    width: 98%;
+    margin: 0 auto;
+    margin-top: 10rpx;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:start;
+}
+
+.TimeBox_two_modul {
+    width: 45%;
+    margin-left: 25rpx;
+    border: 1px solid #f6f7f9;
+    border-radius: 15rpx;
+    margin-top: 20rpx;
+    background-color: #efeff0;
+}
+.TimeBox_two_modul_point{
+  width: 45%;
+    margin-left: 25rpx;
+    border: 1px solid black;
+    border-radius: 15rpx;
+    margin-top: 20rpx;
+    background-color: white;
+}
+
+
+.TimeBox_two_moudulText {
+    padding: 10rpx;
+    padding-left: 20rpx;
+    font-size: 28rpx;
+    font-family: AlibabaPuHuiTi-2-45-Light;
+}
+
+/* 票档 */
+#ticket {
+    margin-top: 30rpx;
+}
+
+#tickTitle {
+  font-weight: 600;
+  font-size: 40rpx;
+  margin-top: 20rpx;
+  margin-left:20rpx;
+  letter-spacing: 8rpx;
+  font-family: AlibabaPuHuiTi-2-45-Light;
+}
+
+#tickItemBox{
+    display: flex;
+    width: 98%;
+    margin: 0 auto;
+    margin-top: -20rpx;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:start;
+    
+}
+
+.tickBox:not(:nth-child(10n)) {
+    width: 45%;
+    border-radius: 15rpx;
+    border: 1px solid black;
+    background-color: white;
+    margin-left: 20rpx;
+    margin-top: 65rpx;
+}
+.tickBoxPick:not(:nth-child(10n)) {
+  width: 45%;
+  border-radius: 15rpx;
+  border: 1px solid #f6f7f9;
+  background-color: #efeff0;
+  margin-left: 20rpx;
+  margin-top: 65rpx;
+}
+#showExcess{
+  font-family: AlibabaPuHuiTi-2-45-Light;
+  letter-spacing: 4rpx;
+  text-align: center;
+  width: 40%;
+  position:fixed ;
+  font-size: 25rpx;
+  margin-top: -35rpx;
+  border: 1px solid #f6f7f9;
+  border-bottom: none;
+  border-radius: 15rpx 15rpx 0 0;
+  background-color: #efeff0;
+  width: 16%;
+  margin-left: 27%;
+}
+#showExcessPick{
+  font-family: AlibabaPuHuiTi-2-45-Light;
+  letter-spacing: 4rpx;
+  text-align: center;
+  position:fixed ;
+  font-size: 25rpx;
+  margin-top: -40rpx;
+  border: 1px solid black;
+  border-bottom: none;
+  border-radius: 15rpx 15rpx 0 0;
+  background-color: white;
+  width: 18%;
+  margin-left: 25%;
+}
+#showLackText{
+  text-align: center;
+  font-size: 32rpx;
+  padding: 15rpx;
+  letter-spacing: 4rpx;
+  margin-left: 10rpx;
+  font-family: AlibabaPuHuiTi-2-45-Light;
+}
+.tickName {
+  text-align: center;
+  font-size: 32rpx;
+  padding: 15rpx;
+  letter-spacing: 4rpx;
+  margin-left: 10rpx;
+  font-family: AlibabaPuHuiTi-2-45-Light;
+}
+
+#conformity{
+  border: 1px solid red;
+}
+
+/* 步进器 */
+#walkAdd{
+    display: flex;
+    width: 95%;
+    position: fixed;
+    top:85%;
+    left: 18rpx;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-bottom: 20rpx;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.315);
+}
+#walkAdd_one{
+    display: flex;
+    margin-top: 10rpx;
+}
+#One_text{
+    font-size: 35rpx;
+    letter-spacing: 4rpx;
+    font-family: AlibabaPuHuiTi-2-55-Regular;
+
+  }
+#One_notice{
+    font-size: 28rpx;
+    margin-left: 10rpx;
+    margin-top: 10rpx;
+    letter-spacing: 4rpx;
+    font-family: AlibabaPuHuiTi-2-45-Light ;
+}
+
+/* 支付按钮 */
+#payBox {
+  width: 100%;
+  position: fixed;
+  top: 92%;
+  background-color: white;
+  display: flex;
+  height: 80rpx;
+  justify-content: space-between;
+}
+
+#payNumber {
+  font-size: 48rpx;
+  margin-left: 20rpx;
+  color: #ff3d96;
+  font-family: AlibabaPuHuiTi-2-55-Regular;
+}
+
+#YesBox {
+    width: 40%;
+    margin-right: 30rpx;
+    height: 65rpx;
+    border-radius: 10rpx;
+    background-color: #f087ba;
+}
+
+#YexText {
+  text-align: center;
+  color: white;
+  font-size: 38rpx;
+  letter-spacing: 15rpx;
+  line-height: 65rpx;
+  font-family:AlibabaPuHuiTi-2-45-Light ;
+}
+
+

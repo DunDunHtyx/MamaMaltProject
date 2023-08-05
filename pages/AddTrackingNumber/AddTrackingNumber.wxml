@@ -1,0 +1,26 @@
+<!-- 填写快递单号页 -->
+<!-- 提醒 -->
+<view id="noticeBox">
+  <image id="exclamation" src="/image/感叹号.png"></image>
+  <view id="noticeText">快递单号要填写正确哦！</view>
+</view>
+<!-- 表单 -->
+<view id="form">
+    <!-- 快递公司 -->
+    <view id="ChoiceCourierCompaniesBox">
+        <view class="CourierCompaniesName">快递公司:</view>
+        <picker id="CourierCompaniesChoose" mode="selector" bindchange="ChoiceCourierCompanies" range="{{CourierCompanies}}">
+            {{showCourier}}
+        </picker>
+    </view>
+    <!-- 快递单号 -->
+    <view id="CourierNumberBox">
+        <view class="CourierCompaniesName">快递单号:</view>
+        <input id="InputCourierCompaniesNumber" type="text" bindinput="getInputNumber" placeholder="请输入快递单号"/>
+    </view>
+</view>
+
+<!-- 按钮 -->
+<view id="AddTrackingNumberButton" bindtap="addCourierCompanies"> 
+    <view id="TrackingNumberText">添加快递单号</view>
+</view>

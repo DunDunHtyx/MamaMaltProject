@@ -1,0 +1,40 @@
+<!-- 个人信息 -->
+<image bindtap="ChooseImage"   id="avater" src="{{showImage}}" mode=""/>
+<!-- 信息 -->
+<view id="personalBox">
+    <!-- 昵称 -->
+    <view class="OneItemBox">
+        <view class="OneItem_one">昵称</view>
+        <input class="OneItem_two" bindinput="getNickName" type="text" placeholder="{{showNickName}}"/>
+    </view>
+    <!-- 手机号 -->
+    <view class="OneItemBox">
+        <view class="OneItem_one">手机号</view>
+        <input class="OneItem_two" bindinput="getPhone" type="text" placeholder="{{showPhone}}"/>
+    </view>
+    <!-- 性别 -->
+    <view class="OneItemBox">
+        <view class="OneItem_one">性别</view>
+        <picker class="OneItem_two"  range="{{sex}}" bindchange="getSex"  mode="selector">
+            {{showSex}}
+        </picker>
+    </view>
+    <!-- 地区 -->
+    <view class="OneItemBox">
+        <view class="OneItem_one">地区</view>
+        <picker mode="region" bindchange="getAddress" class="OneItem_two">
+            {{showAddress}}
+        </picker>
+    </view>
+    <!-- 个性签名 -->
+    <view class="OneItemBox">
+        <view  class="OneItem_one">个性签名</view>
+        <input  class="OneItem_two" bindinput="getPersonalized" type="text" placeholder="{{showGxqm}}"/>
+    </view>
+    <view style="height: 40rpx;"></view>
+</view>
+
+<!-- 修改 -->
+<view id="updateBox" bindtap="update">
+    <view id="updataText">修改</view>
+</view>

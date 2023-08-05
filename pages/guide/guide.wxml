@@ -1,0 +1,8 @@
+<!--引导页-->
+<view id="adv" bindtap="goLogin">
+
+<image id="bgimg" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/GuideImage.jpg"></image>
+
+<image id="advtext" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/text3.png"></image>
+
+</view>

@@ -1,0 +1,61 @@
+<view>
+    <!-- 第一部分 商品信息页 -->
+    <view id="oneModule">
+        <image id="goodImage" src="{{oldGoodSInfo.goodImage}}" />
+        <view id="oneModule_righe">
+            <view id="goodTitle">{{oldGoodSInfo.goodTitle}}</view>
+            <view id="goodStateModule">
+                <view class="orTransportBox" style="display: {{oldGoodSInfo.IsTransport==true?'block':'none'}};">
+                    <view class="transportText">包邮</view>
+                </view>
+                <view class="orTransportBox" style="display: {{oldGoodSInfo.IsTransport==false?'block':'none'}};">
+                    <view class="transportText">不包邮</view>
+                </view>
+                <view id="qualityJudgment">
+                    <view id="qualityJudgmentText">{{showQuality[oldGoodSInfo.quality]}}</view>
+                </view>
+            </view>
+        <view id="goodPrtice">￥{{oldGoodSInfo.goodPrtice}}</view>
+        </view>
+    </view>
+    <!-- 第二部分 -->
+    <view id="twoModule">
+        <!-- 收货地址 -->
+        <view id="ReceiptAddressBox">
+            <view id="ReceiptAddressText">收货地址</view>
+            <view id="ReceiptAddressInfoBox" style="display:{{orChoice==false?'block':'none'}};" >
+                <view id="ReceiptAddress_Name">{{defaultReceipt.ReceiptAddress[0].ReceiptName+defaultReceipt.ReceiptAddress[0].ReceiptPhone}}</view>
+                <view id="ReceiptAddress_Address">{{defaultReceipt.ReceiptAddress[0].ReceiptAddress}}</view>
+                <view id="ReceiptAddress_Address">{{defaultReceipt.ReceiptAddress[0].ReceiptDetailAddress}}</view>
+            </view>
+            <view id="ReceiptAddressInfoBox" style="display:{{orChoice==true?'block':'none'}};">
+                <view id="ReceiptAddress_Name">{{defaultReceipt.ReceiptName+defaultReceipt.ReceiptPhone}}</view>
+                <view id="ReceiptAddress_Address">{{defaultReceipt.ReceiptAddress}}</view>
+                <view id="ReceiptAddress_Address">{{defaultReceipt.ReceiptDetailAddress}}</view>
+            </view>
+                <image bindtap="goAddressManagePage" id="iconImage" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/right.png"/>
+        </view>
+        <!-- 运费 -->
+        <view id="freightBox">
+            <view id="freightText">运费</view>
+            <view id="freightPrtice">
+                ￥{{oldGoodSInfo.freight}}
+            </view>
+        </view>
+        <view style="height: 60rpx;"></view>
+    </view>
+</view>
+
+<!-- 底部栏 -->
+<view id="buttonBox">
+    <!-- 总计 -->
+    <view id="totalBox">
+    <view id="totalPrticeBox">
+        <view id="totalText">总计</view>
+        <view id="totalPrtice">￥{{totalPrtice}}</view>
+    </view>
+        <view id="yesBuy" bindtap="yesPay">
+            <view id="yesBuyText">确认购买</view>
+        </view>
+    </view>
+</view>

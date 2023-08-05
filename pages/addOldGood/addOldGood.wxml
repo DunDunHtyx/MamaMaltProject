@@ -1,0 +1,103 @@
+<!-- 发布闲置品 -->
+<!-- 闲置品信息 -->
+<view id="IdleItemsModule">
+  <!-- 闲置品类别 -->
+  <view class="IdleItems_ItemBox">
+    <view class="IdleItemsTitle">闲置品类型</view>
+    <picker mode="selector" class="pickerText" range="{{GoodType}}" bindchange="choiceGoodType">
+      {{ShowGoogType}}
+    </picker>
+  </view>
+  <!-- 品牌 -->
+  <view class="IdleItems_ItemBox">
+    <view class="IdleItemsTitle">品牌</view>
+    <input type="text" value="{{editOldGoodInfo.brand}}" class="inputText" bindinput="getInputBrand" placeholder="请输入品牌名称" />
+  </view>
+  <!-- 成色 -->
+  <view class="IdleItems_ItemBox">
+    <view class="IdleItemsTitle">成色</view>
+    <picker mode="selector" class="pickerText" range="{{quality}}" bindchange="choiceQuality">
+      {{showQuality}}
+    </picker>
+  </view>
+  <!-- 是否包邮 -->
+  <view class="IdleItems_ItemBox">
+    <view class="IdleItemsTitle">是否包邮</view>
+    <picker mode="selector" class="pickerText" range="{{OrFreeShipping}}" bindchange="choiceOrFreeShipping">
+      {{showOrFreeShipping}}
+    </picker>
+  </view>
+  <!-- 运费价格 -->
+  <view class="IdleItems_ItemBox">
+    <view class="IdleItemsTitle">运费</view>
+    <view id="goodPrticeBox">
+      <view id="PrticeIcon">￥</view>
+      <input type="text" value="{{editOldGoodInfo.freight}}" style="margin-left: 10rpx;" class="inputText" bindinput="getInputFreight" placeholder="请输入邮费价格" />
+    </view>
+  </view>
+</view>
+
+
+<!-- 闲置品简介+照片 -->
+<view id="IdleItemsIntroduction">
+  <!-- 商品标题 -->
+  <view id="goodTitleBox">
+    <view id="goodTitleText">商品标题</view>
+    <textarea value="{{editOldGoodInfo.goodTitle}}" bindinput="getGootTitle" id="goodTitleInput" placeholder="请输入商品标题" />
+  </view>
+
+  <!-- 商品简介 -->
+  <view id="goodIntroductionBox">
+    <!-- 商品简述 -->
+    <view id="goodBrieflyBox">
+      <view id="goodBriefly">商品简述</view>
+      <editor id="editor"  bindinput="getContent" class="ql-container" placeholder="{{showOldGoodIntro}}" bindready="onEditorReady"></editor>
+    </view>
+
+    <!--活动照片-->
+    <view class="cu-bar bg-white " style="margin-top:-200rpx;">
+      <view class="action" style="font-size: 32rpx; ">
+        活动照片上传
+      </view>
+      <view class="action">
+        {{imgList.length}}/5
+      </view>
+    </view>
+    <view class="cu-form-group">
+      <view class="grid col-4 grid-square flex-sub">
+        <view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+          <image src='{{imgList[index]}}' mode='aspectFill'></image>
+          <view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}"  data-ImageUrl="{{imgList[index]}}" >
+            <text class="cuIcon-close"></text>
+          </view>
+        </view>
+        <view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<5}}">
+          <text class="cuIcon-cameraadd"></text>
+        </view>
+      </view>
+    </view>
+    <!-- 价格 -->
+    <view id="goodPrticeBox">
+      <view id="goodPrtice_leftBox">
+        <image id="goodPrticeIcon" src="/image/充值.png" />
+        <view id="goodPrticeText">价格</view>
+      </view>
+      <view id="goodPrtice_rightBox">
+        <view id="goodPrtice_rightBoxMI">￥</view>
+        <input id="goodPrtice_rightBoxInput" value="{{editOldGoodInfo.goodPrtice}}" bindinput="getOldGoodPrtice" type="text" placeholder="商品价格" />
+      </view>
+    </view>
+  </view>
+  <view style="height: 100rpx;"></view>
+</view>
+
+<!-- 按钮 -->
+<view id="ButtonBox">
+  <view class="ButtonItem" bindtap="publishGood" style="display: {{goPageType==1?'block':'none'}};" >
+    <view class="ButtonText" style="display: {{goPageType==1?'block':'none'}};">发布</view>
+  </view>
+  <view class="ButtonItem" bindtap="reviseOldGoodInfo" style="display: {{goPageType==2?'block':'none'}};">
+    <view class="ButtonText" style="display: {{goPageType==2?'block':'none'}};">修改</view>
+  </view>
+</view>
+<view style="height: 100rpx;"></view>

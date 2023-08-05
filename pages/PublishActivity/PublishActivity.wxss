@@ -1,0 +1,194 @@
+@import "/assets/iconfont.wxss";
+@font-face {
+	font-family: AlibabaPuHuiTi-2-45-Light;
+	src:url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.eot) format('embedded-opentype'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.otf) format('opentype'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.ttf) format('TrueType'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.woff) format('woff'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.woff2) format('woff2');
+}
+
+
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #FFF8F8;
+}
+
+#module_one{
+  border: 2px solid #BBBBBB;
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 80rpx;
+  background-color: white;
+  border-radius: 30rpx;
+}
+
+.ql-container {
+  box-sizing: border-box;
+  padding: 12px 15px;
+  width: 100%;
+  height:280rpx;
+  background: #fff;
+  font-size: 20px;
+  font-family:AlibabaPuHuiTi-2-45-Light ;
+  letter-spacing: 4rpx;
+  line-height: 1.5;
+  margin-top: 10rpx;
+}
+.action{
+  font-family:AlibabaPuHuiTi-2-45-Light ;
+  letter-spacing: 4rpx;
+}
+#dd{
+  height: 20rpx;
+}
+#module_two_text{
+  font-family: AlibabaPuHuiTi-2-45-Light;
+  font-size: 50rpx;
+  font-weight: 600;
+  letter-spacing: 4rpx;
+  margin-top: 30rpx;
+  width: 40%;
+  margin-left: 30rpx;
+}
+
+/* 模块2 */
+#module_two{
+  border: 2px solid #BBBBBB;
+  width: 95%;
+  height: 1250rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  background-color: white;
+  border-radius: 30rpx;
+}
+
+
+#ActivityTimeBox{
+  border-bottom: 2px solid #BBBBBB;
+  padding: 30rpx;
+  display: flex;
+  color: gray;
+  font-family:AlibabaPuHuiTi-2-45-Light ;
+}
+#TimeBox{
+  margin-left: 200rpx;
+  font-family:AlibabaPuHuiTi-2-45-Light ;
+  font-size: 33rpx;
+  margin-left: 105rpx;
+  margin-top: 5rpx;
+  letter-spacing: 4rpx;
+}
+#addressBox{
+  border-bottom: 2px solid #BBBBBB;
+  display: flex;
+  padding: 30rpx;
+}
+#addresPick{
+  margin-left: 200rpx;
+  font-family:AlibabaPuHuiTi-2-45-Light ;
+  font-size: 33rpx;
+  margin-left: 105rpx;
+  color: gray;
+  margin-top: 5rpx;
+  letter-spacing: 4rpx;
+}
+#DetailAddressBox{
+  border-bottom: 2px solid #BBBBBB;
+  padding: 30rpx;
+}
+#Label{
+  border-bottom: 2px solid #BBBBBB;
+  display: flex;
+  padding: 30rpx;
+}
+#Module_two_texts{
+  font-family:AlibabaPuHuiTi-2-45-Light ;
+    font-size: 40rpx;
+    padding: 30rpx;
+}
+.Module_two_text{
+    font-family:AlibabaPuHuiTi-2-45-Light ;
+    font-size: 38rpx;
+    letter-spacing: 4rpx;
+}
+#DetailAddress_input{
+  width: 95%;
+  height: 110rpx;
+  margin: 0 auto;
+  margin-top: 25rpx;
+  color: gray;
+  font-family:AlibabaPuHuiTi-2-45-Light ;
+  font-size: 33rpx;
+  letter-spacing: 4rpx;
+}
+#LabelPic{
+  margin-left: 200rpx;
+  font-family:AlibabaPuHuiTi-2-45-Light ;
+  color: gray;
+  font-size: 33rpx;
+  margin-left: 105rpx;
+  margin-top: 5rpx;
+  letter-spacing: 4rpx;
+}
+#ql-containers{
+  box-sizing: border-box;
+  padding: 12px 15px;
+  width: 100%;
+  height:280rpx;
+  background: #fff;
+  font-size: 38rpx;
+  color: gray;
+  font-family:AlibabaPuHuiTi-2-45-Light ;
+  letter-spacing: 4rpx;
+  line-height: 1.5;
+  margin-top: -15rpx;
+}
+#Briefly{
+  box-sizing: border-box;
+  padding: 12px 15px;
+  width: 98%;
+  margin: 0 auto;
+  height:300rpx;
+  background: #fff;
+  font-size: 35rpx;
+  font-family:AlibabaPuHuiTi-2-45-Light ;
+  letter-spacing: 4rpx;
+  line-height: 1.5;
+  margin-top: 10rpx;
+}
+#ddd{
+  height: 200rpx;
+}
+#publishBox{
+    width: 50%;
+    height: 75rpx;
+    margin: 0 auto;
+    margin-top: 70rpx;
+    border-radius: 10rpx;
+    background-color: #E99D42;
+}
+#publisjText{
+  color: white;
+  font-size:45rpx;
+  line-height: 70rpx;
+  letter-spacing: 10rpx;
+  font-weight: 600;
+  text-align: center;
+font-family:AlibabaPuHuiTi-2-45-Light ;
+}
+
+/* 按钮 */
+#buttonBoxs{
+  /* border: 1px solid red; */
+  display: flex;
+}
+.publishBoxss{
+  width: 40%;
+  height: 75rpx;
+  margin: 0 auto;
+  margin-top: 70rpx;
+  border-radius: 10rpx;
+  /* background-color: #E99D42; */
+}

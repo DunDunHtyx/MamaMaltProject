@@ -1,0 +1,109 @@
+<image class="back" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/background.jpg"></image>
+<!--头像-->
+<view class="top" style="opacity:{{0.8}}">
+  <view class="touxiang">
+    <image src="{{userInfor.userImage}}" style="border-radius:20rpx;  width: 150rpx; height: 150rpx;"></image>
+  </view>
+  <view class="right">
+    <view style=" display: flex; height: 40rpx;">
+      <view class="name">{{userInfor.userName}}</view>
+      <image style="display:{{userInfor.userSex==1 ?'block':'none'}}; margin-left: 5rpx; width: 45rpx; height: 40rpx; margin-top: 10rpx;" id="sexIcon" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/女.png"></image>
+      <image style="display: {{userInfor.userSex==0 ?'block':'none'}}; margin-left: 5rpx; width: 45rpx; height: 40rpx; margin-top: 10rpx;" id="sexIcon" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/男.png"></image>
+    </view>
+    <view class="biaoyu" style="display: {{userInfor.userText.length!=0?'block':'none'}};">{{userInfor.userText}}</view>
+    <view class="biaoyu" style="display: {{userInfor.userText.length==0?'block':'none'}};">这个人很神秘,什么都没写</view>
+  </view>
+  <view bindtap="saoMa">
+    <image id="saoMa" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/扫码.png"></image>
+  </view>
+</view>
+<!-- 第一行 -->
+<view class="myxinxi">我的信息</view>
+<view class="oneline">
+  <!-- 实名认证 -->
+  <view class="oneline-item" bindtap="goRealname">
+    <image src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/实名认证.png" style="width: 90rpx; height: 90rpx; margin-left: 35rpx; margin-top: 20rpx;"></image>
+    <view style="letter-spacing: 4rpx; text-align: center; font-size:32rpx; font-family: AlibabaPuHuiTi-2-45-Light;">实名认证</view>
+  </view>
+  <!-- 地址管理 -->
+  <view class="oneline-item" bindtap="goAddressManagement">
+    <image src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/坐标.png" style="width: 90rpx; height: 80rpx; margin-left: 35rpx; margin-top:26rpx;"></image>
+    <view style="text-align: center; letter-spacing: 4rpx; font-size: 32rpx; margin-top: 6rpx;  font-family: AlibabaPuHuiTi-2-45-Light;">地址管理</view>
+  </view>
+  <!-- 个人信息 -->
+  <view class="oneline-item" bindtap="goPersonalInformation">
+    <image src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/MyInformation.png" style="width: 100rpx; height: 90rpx; margin-left: 40rpx; margin-top: 20rpx;"></image>
+    <view style="text-align: center; font-size: 32rpx; letter-spacing: 4rpx; margin-top: 5rpx; margin-left: 15rpx; font-family: AlibabaPuHuiTi-2-45-Light;">个人信息</view>
+  </view>
+</view>
+<!-- 第二行 -->
+<view class="gongneng">功能管理</view>
+<view class="twoline">
+  <!--线下活动  -->
+  <view class="twoline-item" bindtap="goOfflineEvents">
+    <image src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/线下活动.png" style="width: 95rpx; height: 90rpx; margin-left: 30rpx; margin-top:25rpx;"></image>
+    <view style="letter-spacing: 4rpx; text-align: center; font-size: 32rpx; margin-top: 4rpx; font-family: AlibabaPuHuiTi-2-45-Light;">线下活动</view>
+  </view>
+  <!-- 通知 -->
+  <view class="twoline-item" bindtap="goNotice">
+    <image src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/通知.png" style="width: 105rpx; height: 85rpx; margin-left: 30rpx; margin-top: 28rpx;"></image>
+    <view style="text-align: center; letter-spacing: 8rpx; font-size: 32rpx;font-family: AlibabaPuHuiTi-2-45-Light; margin-top: 5rpx; ">通知</view>
+  </view>
+  <!-- 帖子 -->
+  <view class="twoline-item" bindtap="goPost">
+    <image src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/帖子.png" style="width: 100rpx; height: 80rpx; margin-left: 40rpx; margin-top: 32rpx;"></image>
+    <view style="text-align: center; letter-spacing: 8rpx; font-size: 32rpx; margin-left: 15rpx; font-family: AlibabaPuHuiTi-2-45-Light; margin-top: 2rpx;">帖子</view>
+  </view>
+</view>
+<!-- 第三行 -->
+<view class="shopping">麦芽商城</view>
+<view class="threeline">
+  <!-- 我发布的 -->
+  <view class="threeline-item" bindtap="goPublish">
+    <image src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/发布.png" style="width: 80rpx; height: 75rpx; margin-left: 35rpx; margin-top: 27rpx;"></image>
+    <view style="margin-top: 8rpx; text-align: center; font-size: 32rpx; letter-spacing: 4rpx; font-family: AlibabaPuHuiTi-2-45-Light;">我发布的</view>
+  </view>
+  <!-- 我卖出的 -->
+  <view class="threeline-item" bindtap="goSell">
+    <image src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/卖出.png" style="width: 90rpx; height: 80rpx; margin-left: 45rpx; margin-top: 28rpx;"></image>
+    <view style="text-align: center; font-size: 32rpx; letter-spacing: 4rpx; font-family: AlibabaPuHuiTi-2-45-Light; margin-left: 6rpx; margin-top: 5rpx;">我卖出的</view>
+  </view>
+  <!-- 我买到的 -->
+  <view class="threeline-item" bindtap="goBuy">
+    <image src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/买入.png" style="width: 100rpx; height: 80rpx; margin-left: 40rpx; margin-top: 28rpx;"></image>
+    <view style="text-align: center; font-size: 32rpx; letter-spacing: 4rpx; font-family: AlibabaPuHuiTi-2-45-Light; margin-top: 5rpx;  margin-left: 15rpx;">我买到的</view>
+  </view>
+</view>
+<!-- 第四行 -->
+<view class="qita">其他服务</view>
+<view class="foreline">
+  <!-- 反馈意见 -->
+  <button class="feedBackButton" open-type="feedback">
+      <image src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/意见反馈 .png" style="width: 110rpx; height: 88rpx; margin-top: 22rpx;"></image>
+      <view style="text-align: center;letter-spacing: 4rpx; margin-top: -45rpx; margin-left: 13rpx;  font-size: 32rpx; font-family: AlibabaPuHuiTi-2-45-Light;">反馈意见</view>
+  </button>
+  <!-- 商家入驻 -->
+  <view class="foreline-items" bindtap="goMerchantsSettle" bindtap="show">
+    <image src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/商家入驻.png" style="width: 110rpx; height: 85rpx; margin-left: 35rpx; margin-top: 20rpx;"></image>
+    <view style="text-align: center;letter-spacing: 4rpx; margin-top: 5rpx;margin-left: 20rpx;  font-size: 32rpx; font-family: AlibabaPuHuiTi-2-45-Light;">商家入驻</view>
+  </view>
+  <!-- 设置 -->
+  <view class="foreline-itemss" bindtap="goSet">
+    <image src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/setUp.png" style="width: 85rpx; height: 78rpx; margin-left: 50rpx; margin-top: 25rpx;"></image>
+    <view style=" letter-spacing: 8rpx; text-align: center; font-size: 32rpx; font-family: AlibabaPuHuiTi-2-45-Light; margin-top: 5rpx; margin-left: 18rpx;">设置</view>
+  </view>
+</view>
+<view id="ddd"></view>
+
+<!--遮罩层-->
+<view id="hide" bindtap="conceal" style="display:{{OrHidden?'':'none'}};"></view>
+<!-- 商家入驻 -->
+<view class="MerchantsSettleBox" style="display:{{OrHidden?'':'none'}};" >
+    <view class="MerchantsSettleTop">
+      <view class="MerchantsSettleTop_one">入驻麦芽妈妈</view>
+      <image class="MerchantsSettleTop_two"  bindtap="conceal" src="/image/关闭.png"/>
+    </view>
+    <view class="MerchantsSettleTop_three">
+      <mp-html content="{{SettledInfor}}" />
+    </view>
+</view>

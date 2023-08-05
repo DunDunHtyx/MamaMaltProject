@@ -1,0 +1,162 @@
+
+@font-face {
+	font-family: AlibabaPuHuiTi-2-55-Regular;
+	src:url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.eot) format('embedded-opentype'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.otf) format('opentype'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.ttf) format('TrueType'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.woff) format('woff'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.woff2) format('woff2');
+}
+
+
+@font-face {
+	font-family: AlibabaPuHuiTi-2-45-Light;
+	src:url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.eot) format('embedded-opentype'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.otf) format('opentype'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.ttf) format('TrueType'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.woff) format('woff'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.woff2) format('woff2');
+}
+
+
+@font-face {
+	font-family: AlibabaPuHuiTi-2-55-Regular;
+	src:url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.eot) format('embedded-opentype'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.otf) format('opentype'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.ttf) format('TrueType'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.woff) format('woff'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.woff2) format('woff2');
+}
+
+
+
+
+
+
+page {
+  width: 100%;
+  height: 100%;
+  background-color: #FFF8F8;
+}
+
+.inoculationVaccine {
+  border: 1px solid white;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 30rpx;
+  margin-top: 50rpx;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 10px #f7a6c457;
+}
+
+.inoculationTime {
+  font-size: 40rpx;
+  letter-spacing: 8rpx;
+  color: #EE7BA6;
+  border-bottom: 1px solid gray;
+  padding: 20rpx;
+  font-family: AlibabaPuHuiTi-2-55-Regular;
+}
+
+.vaccineBox {
+  border-bottom: 1px solid gray;
+  
+}
+
+.vaccine_one {
+  display: flex;
+  height: 60rpx;
+  margin-top: 20rpx;
+}
+
+.vaccine_name {
+  font-size: 38rpx;
+  font-weight: 800;
+  letter-spacing: 8rpx;
+  margin-left: 30rpx;
+  font-family: AlibabaPuHuiTi-2-55-Regular;
+}
+
+.vaccine_must {
+  width: 100rpx;
+  height: 45rpx;
+  font-size: 30rpx;
+  text-align: center;
+  letter-spacing: 4rpx;
+  margin-left: 28rpx;
+  margin-top: 8rpx;
+  border: 1px solid gray;
+  font-family: AlibabaPuHuiTi-2-55-Regular;
+  border-radius: 10rpx;
+  padding-left: 8rpx;
+  padding-right: 8rpx;
+  padding-bottom: 8rpx;
+  line-height: 38rpx;
+}
+
+.vacccine_moeny {
+  /* width: 130rpx; */
+  text-align: center;
+  height: 45rpx;
+  letter-spacing: 4rpx;
+  font-family: AlibabaPuHuiTi-2-55-Regular;
+  font-size: 30rpx;
+  padding-left: 10rpx;
+  padding-bottom: 8rpx;
+  padding-right: 10rpx;
+  margin-top: 8rpx;
+  line-height: 46rpx;
+  border: 1px solid #e99d42;
+  border-radius: 10rpx;
+  color: #e99d42;
+  margin-left: 30rpx;
+}
+
+.vaccine_neddle {
+  height: 45rpx;
+  font-size: 30rpx;
+  letter-spacing: 4rpx;
+  font-family: AlibabaPuHuiTi-2-55-Regular;
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+  padding-bottom: 8rpx;
+  line-height: 38rpx;
+  margin-top: 8rpx;
+  border: 1px solid gray;
+  border-radius: 10rpx;
+  margin-left: 30rpx;
+}
+
+.vacccine_two {
+  width: 100%;
+  margin-left: 5rpx;
+  display: flex;
+  margin-top: 5rpx;
+}
+
+.vaccine_three {
+  width: 90%;
+  margin-top: 18rpx;
+  margin-left: 10rpx;
+  font-family: AlibabaPuHuiTi-2-45-Light;
+  font-weight: 600;
+}
+
+.vaccine_content {
+  padding-left: 1rpx;
+  font-size: 30rpx;
+  letter-spacing: 8rpx;
+  margin-left: 30rpx;
+}
+
+#dd {
+  height: 30rpx;
+}
+
+#ddd {
+  height: 40rpx;
+}
+
+#dddd {
+  height: 100rpx;
+}

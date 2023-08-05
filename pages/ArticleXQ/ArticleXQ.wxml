@@ -1,0 +1,67 @@
+<view>
+  <!--文章题目-->
+  <view id="topModul">
+    <view id="title">{{article.articleTitle}}</view>
+    <view id="from">摘自于:{{article.excerptFrom}}</view>
+  </view>
+  <!--文章照片-->
+  <view id="contentBox">
+    <mp-html id="content" content="{{article.articleDetails}}" />
+  </view>
+  <!--注意事项-->
+  <view id="notice">*{{article.remind}}</view>
+  
+  <!--评论模块-->
+  <view id="commendBoxs">
+    <view id="commendTitles">评论</view>
+    <view id="commendModul" wx:for="{{comments}}" wx:key="index">
+      <!--用户信息-->
+      <view id="userBox">
+        <view id="user_one">
+          <image id="avater" src="{{item.avater}}"></image>
+          <view id="nickName">{{item.userName}}</view>
+        </view>
+        <image id="trash" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/deleat.png" bindtap="remove" data-id="{{item._id}}" style="display: {{item.userID==userID?'':'none'}};"></image>
+      </view>
+      <!--内容-->
+      <view id="CommendContent">{{item.content}}</view>
+      <view id="time">{{item.pubshTime}}</view>
+    </view>
+  </view>
+
+
+  <view id="ddd"></view>
+
+  <!--点赞评论框-->
+  <view id="toolModul">
+    <view id="toolBox">
+      <!--评论框-->
+      <input placeholder="评价两句" disabled="true" bindtap="show" id="commentInput" type="text" />
+      <!--点赞 收藏 转发 框-->
+      <view id="tool_oneBox">
+        <!--查看评论 模块-->
+        <view bindtap="toViewBottomFun"> 
+          <image  class="icon" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/message.png"></image>
+        </view>
+        <!--点赞模块-->
+        <view class="iconBox">
+          <image class="icon" bindtap="goDianzan" src="{{orDianzan?'cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/aleadyKudos.png':'cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/Kudos.png'}}" bindtap="goDianzan"></image>
+          <view class="number">{{dianzanNumber}}</view>
+        </view>
+        <!--收藏模块-->
+        <view class="iconBox">
+          <image class="icon" bindtap="goShoucang" src="{{orShoucang?'cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/aleadyCollection.png':'cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/collection.png'}}" bindtap="goShoucang"></image>
+          <view class="number">{{shoucangNumber}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--评论-->
+</view>
+<!--遮罩层-->
+<view id="hide" bindtap="conceal" style="display:{{OrHidden?'':'none'}};"></view>
+<!--评论输入框-->
+<view id="commendBox" style="display:{{OrHidden?'':'none'}};">
+  <textarea placeholder="写评论...." confirm-type="done" bindinput="getInput" auto-focus="true" id="commendInput" cols="30" rows="5"></textarea>
+  <view id="publish" bindtap="addComments">发布</view>
+</view>

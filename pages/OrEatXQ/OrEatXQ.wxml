@@ -1,0 +1,87 @@
+<!--能不能吃详情页-->
+<view>
+  <!--照片-->
+  <view class="img">
+    <image src="{{orEat.eatImage}}" style="width: 100%; height: 330rpx; border-radius: 0rpx  0rpx 30rpx 30rpx;"></image>
+  </view>
+  <!--食物基本信息-->
+  <view>
+    <view class="tittle">{{orEat.eatNmae}}</view>
+    <view class="alias">别名:{{orEat.nickName}}</view>
+    <view class="dd"></view>
+  </view>
+  <!--孕期-->
+  <view class="because">
+    <view class="because_one">
+      <view class="because-tittle">孕期</view>
+      <view class="because_tittle_box">
+        <image src="/image/greenTick.png" style="width: 46rpx; height: 46rpx;margin-top: 20rpx; display: {{orEat.pregnantEatType==2?'':'none'}};"></image>
+        <view  style="display: {{orEat.pregnantEatType==2?'':'none'}} ;font-family: AlibabaPuHuiTi-2-55-Regular; font-size: 33rpx; letter-spacing: 8rpx; color: #89ed18; margin-left: 15rpx;">能吃</view>
+        
+        <image src="/image/NotEat.png" style="width: 46rpx; height: 46rpx;margin-top: 20rpx; display: {{orEat.pregnantEatType==0?'':'none'}};"></image>
+        <view  style="display: {{orEat.pregnantEatType==0?'':'none'}};font-family: AlibabaPuHuiTi-2-55-Regular; font-size: 33rpx; letter-spacing: 8rpx; color: #fe4552; margin-left: 15rpx;">不能吃</view>
+        
+        <image src="/image/eatLess.png" style="width: 46rpx; height: 46rpx;margin-top: 20rpx; display: {{orEat.pregnantEatType==1?'':'none'}};"></image>
+        <view  style="display: {{orEat.pregnantEatType==1?'':'none'}} ;font-family: AlibabaPuHuiTi-2-55-Regular; font-size: 33rpx; letter-spacing: 8rpx; color: #f79d0d; margin-left: 15rpx;" >少吃</view>
+      </view>
+    </view>
+    <view class="because-jieshao">{{orEat.pregnantContent}}</view>
+    <view class="dd"></view>
+  </view>
+  <!--月子-->
+  <view class="because">
+    <view class="because_one">
+      <view class="because-tittle">月子</view>
+      <view class="because_tittle_box">
+        <image src="/image/greenTick.png" style="width: 46rpx; height: 46rpx;margin-top: 20rpx; display: {{orEat.confinedEatType==2?'':'none'}};"></image>
+        <view  style="display: {{orEat.confinedEatType==2?'':'none'}} ;font-family: AlibabaPuHuiTi-2-55-Regular; font-size: 33rpx; letter-spacing: 8rpx; color: #89ed18; margin-left: 15rpx;">能吃</view>
+        
+        <image src="/image/NotEat.png" style="width: 46rpx; height: 46rpx;margin-top: 20rpx; display: {{orEat.confinedEatType==0?'':'none'}};"></image>
+        <view  style="display: {{orEat.confinedEatType==0?'':'none'}};font-family: AlibabaPuHuiTi-2-55-Regular; font-size: 33rpx; letter-spacing: 8rpx; color: #fe4552; margin-left: 15rpx;">不能吃</view>
+        
+        <image src="/image/eatLess.png" style="width: 46rpx; height: 46rpx;margin-top: 20rpx; display: {{orEat.confinedEatType==1?'':'none'}};"></image>
+        <view  style="display: {{orEat.confinedEatType==1?'':'none'}} ;font-family: AlibabaPuHuiTi-2-55-Regular; font-size: 33rpx; letter-spacing: 8rpx; color: #f79d0d; margin-left: 15rpx;" >少吃</view>
+      </view>
+    </view>
+    <view class="because-jieshao">{{orEat.confinedContent}}</view>
+    <view class="dd"></view>
+  </view>
+  <!--哺乳期-->
+  <view class="because">
+    <view class="because_one">
+      <view class="because-tittle">哺乳期</view>
+      <view class="because_tittle_box">
+        <image src="/image/greenTick.png" style="width: 46rpx; height: 46rpx;margin-top: 20rpx; display: {{orEat.lactationEatType==2?'':'none'}};"></image>
+        <view  style="display: {{orEat.lactationEatType==2?'':'none'}} ;font-family: AlibabaPuHuiTi-2-55-Regular; font-size: 33rpx; letter-spacing: 8rpx; color: #89ed18; margin-left: 15rpx;">能吃</view>
+        
+        <image src="/image/NotEat.png" style="width: 46rpx; height: 46rpx;margin-top: 20rpx; display: {{orEat.lactationEatType==0?'':'none'}};"></image>
+        <view  style="display: {{orEat.lactationEatType==0?'':'none'}};font-family: AlibabaPuHuiTi-2-55-Regular; font-size: 33rpx; letter-spacing: 8rpx; color: #fe4552; margin-left: 15rpx;">不能吃</view>
+        
+        <image src="/image/eatLess.png" style="width: 46rpx; height: 46rpx;margin-top: 20rpx; display: {{orEat.lactationEatType==1?'':'none'}};"></image>
+        <view  style="display: {{orEat.lactationEatType==1?'':'none'}} ;font-family: AlibabaPuHuiTi-2-55-Regular; font-size: 33rpx; letter-spacing: 8rpx; color: #f79d0d; margin-left: 15rpx;" >少吃</view>
+      </view>
+    </view>
+    <view class="because-jieshao">{{orEat.lactationContent}}</view>
+    <view class="dd"></view>
+  </view>
+  <!--宝宝-->
+  <view class="because">
+    <view class="because_one">
+      <view class="because-tittle">宝宝</view>
+      <view class="because_tittle_box">
+        <image src="/image/greenTick.png" style="width: 46rpx; height: 46rpx;margin-top: 20rpx; display: {{orEat.babyEattype==2?'':'none'}};"></image>
+        <view  style="display: {{orEat.babyEattype==2?'':'none'}} ;font-family: AlibabaPuHuiTi-2-55-Regular; letter-spacing: 8rpx; color: #89ed18; font-size: 33rpx; margin-left: 15rpx;">能吃</view>
+        
+        <image src="/image/NotEat.png" style="width: 46rpx; height: 46rpx;margin-top: 20rpx; display: {{orEat.babyEattype==0?'':'none'}};"></image>
+        <view  style="display: {{orEat.babyEattype==0?'':'none'}};font-family: AlibabaPuHuiTi-2-55-Regular; letter-spacing: 8rpx; color: #fe4552; font-size: 33rpx; margin-left: 15rpx;">不能吃</view>
+        
+        <image src="/image/eatLess.png" style="width: 46rpx; height: 46rpx;margin-top: 20rpx; display: {{orEat.babyEattype==1?'':'none'}};"></image>
+        <view  style="display: {{orEat.babyEattype==1?'':'none'}} ;font-family: AlibabaPuHuiTi-2-55-Regular; letter-spacing: 8rpx; color: #f79d0d; font-size: 33rpx; margin-left: 15rpx;" >少吃</view>
+      </view>
+    </view>
+    <view class="because-jieshao">{{orEat.babyContent}}</view>
+    <view class="dd"></view>
+  </view>
+  <view class="bottom">内容来源:{{orEat.comfrom}}</view>
+  <view id="ddd"></view>
+</view>

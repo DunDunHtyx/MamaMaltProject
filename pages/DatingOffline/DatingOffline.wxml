@@ -1,0 +1,111 @@
+<wxs src="/wxs/StringFen.wxs" module="tools" />
+<view>
+  <!--背景图片-->
+  <image id="backImage" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/background.jpg"></image>
+  <!-- 轮播图  轮播图只能有4张 -->
+  <swiper autoplay="true" indicator-dots="true" circular="true" id="lunBox">
+    <swiper-item wx:for="{{swiperImage}}" wx:if="{{index<4}}" data-activityID="{{item.activityID}}" bindtap="goDesignateActivity">
+      <image class="lunImage" src="{{item.carouselImage}}"></image>
+    </swiper-item>
+  </swiper>
+
+  <!--精彩瞬间-->
+  <view id="jingcaiBox" bindtap="goJingCai">
+    <image id="jingText" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/JingCaiShunJian.png"></image>
+    <image id="ringtIcon" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/right.png"></image>
+  </view>
+
+
+  <!--活动模块-->
+  <view id="activeBox" style="height:{{scrollViewHeight}}px ;">
+    <!--滚动选择框模块-->
+    <view id="gunDonBox">
+      <!--滑动选择框-->
+      <scroll-view scroll-x="true" class="nav" scroll-left="{{navScrollLeft}}">
+        <block wx:for="{{navData}}" wx:key="index">
+          <view class="nav_item {{currentNav == index?'active':''}}" data-current="{{index}}" bindtap="switchNav">{{item.name}}</view>
+        </block>
+      </scroll-view>
+      <!--竖线-->
+      <view id="line"></view>
+      <!--图标-->
+      <image id="navIcon" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/classify.png"></image>
+    </view>
+
+    <!--下拉选择框-->
+    <view id="selectBox">
+      <image id="locationIcon" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/定位.png"></image>
+      <!--地区-->
+      <view id="addressBox">
+        <picker mode="region" bindchange="getAddress" id="locationSelect">
+          <view class="selBox">
+            <view class="selectedItem">{{showAdress}}</view>
+            <image class="updownIcon" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/选择下拉.png"></image>
+          </view>
+        </picker>
+      </view>
+
+      <view id="activeTypeBox">
+        <picker mode="selector" id="activeTypeSelect" range="{{activeArray}}" bindchange="getActiveType">
+          <view class="selBox">
+            <view class="selectedItem">{{showType}}</view>
+            <image class="updownIcon" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/选择下拉.png"></image>
+          </view>
+        </picker>
+      </view>
+    </view>
+    <!--选择项的内容 0:发现 1:幼儿园 2:家教 3:亲子游 4:游乐园 -->
+    <view id="ActiveModule">
+      <!--活动板块-->
+      <view id="ActiveBox" wx:for="{{showActitityInfo}}" wx:key="index" data-id="{{item._id}}" bindtap="goAticleXQ">
+        <!--用户信息-->
+        <view id="userInforBox">
+          <image id="avaterImage" src="{{item.userInfo[0]}}"></image>
+
+          <view id="userBox_one">
+            <view id="userBox_two">
+              <view id="NickName">{{item.userInfo[1]}}</view>
+              <image style="display:{{item.userInfo[2]==1 ?'block':'none'}};" id="sexIcon" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/女.png"></image>
+              <image style="display: {{item.userInfo[2]==0 ?'block':'none'}};" id="sexIcon" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/男.png"></image>
+            </view>
+            <view id="user_two" style="display: {{item.activityType==0?'block':'none'}};">
+              <view id="activityType">个人组织</view>
+            </view>
+            <view id="user_two" style="display: {{item.activityType==1?'block':'none'}};">
+              <view id="activityType">商家活动</view>
+            </view>
+          </view>
+
+          <view id="publishTime">{{item.activityPublishTime}}</view>
+        </view>
+
+
+        <!--标签-->
+        <view id="table">
+          <view class="tableText" wx:for="{{item.activityTitle}}" wx:key="index">#{{item}}</view>
+        </view>
+        <!--简述-->
+        <view class="brief">
+          <view class="briefTxtePerson" style="display: {{item.activityType==0?'-webkit-box':'none'}};">{{item.activityOverview}}</view>
+          <view class="briefTxte" style="display: {{item.activityType==1?'-webkit-box':'none'}};">{{item.activityTheme}}</view>
+        </view>
+        <!--活动信息-->
+        <view class="activeContent">
+          <image class="activeImage" src="{{item.activityImage}}"></image>
+          <view class="activeDate">
+            <view class="activeTime">{{item.activityDate}}</view>
+            <view class="activeAddress">{{tools.subDate(item.activityAddress)}}</view>
+          </view>
+          <view class="GoSee">
+            <view class="GoText">查看详细</view>
+          </view>
+        </view>
+        <view id="dd"></view>
+      </view>
+      <view id="ddd"></view>
+    </view>
+  </view>
+</view>
+
+<!--发布活动-->
+<image bindtap="addActives" id="addIcon" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/添加.png"></image>

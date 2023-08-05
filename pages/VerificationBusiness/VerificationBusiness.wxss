@@ -1,0 +1,212 @@
+@font-face {
+	font-family: AlibabaPuHuiTi-2-45-Light;
+	src:url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.eot) format('embedded-opentype'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.otf) format('opentype'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.ttf) format('TrueType'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.woff) format('woff'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.woff2) format('woff2');
+}
+
+
+@font-face {
+	font-family: AlibabaPuHuiTi-2-65-Medium;
+	src:url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-65-Medium/AlibabaPuHuiTi-2-65-Medium.eot) format('embedded-opentype'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-65-Medium/AlibabaPuHuiTi-2-65-Medium.otf) format('opentype'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-65-Medium/AlibabaPuHuiTi-2-65-Medium.ttf) format('TrueType'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-65-Medium/AlibabaPuHuiTi-2-65-Medium.woff) format('woff'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-65-Medium/AlibabaPuHuiTi-2-65-Medium.woff2) format('woff2');
+}
+
+
+@font-face {
+	font-family: AlibabaPuHuiTi-2-55-Regular;
+	src:url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.eot) format('embedded-opentype'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.otf) format('opentype'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.ttf) format('TrueType'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.woff) format('woff'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.woff2) format('woff2');
+}
+
+
+
+page{
+  background-color: #efefefcc;
+}
+
+/* 活动信息 */
+#activityMoBox{
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 30rpx;
+  background-color: white;
+  margin-top: 60rpx;
+  border: 1px solid #BBBBBB;
+}
+#activityMoudle{
+  display: flex;
+}
+/* 活动照片 */
+
+#showImage{
+  height: 240rpx;
+  margin-left:30rpx;
+  margin-top:32rpx;
+  border-radius: 20rpx;
+}
+/* 活动信息 */
+#activityInformation{
+  margin-left: 30rpx;
+}
+/* 主题 */
+#title{
+    font-family:AlibabaPuHuiTi-2-65-Medium ;
+    font-size: 33rpx;
+    margin-top: 26rpx;
+    letter-spacing: 4rpx;
+}
+/* 认证信息 */
+#authenticationModul{
+  display: flex;
+  margin-top: 5rpx;
+}
+#officalText{
+  font-family: AlibabaPuHuiTi-2-45-Light;
+  color: #0F40F5;
+  font-weight: 600;
+  font-size: 29rpx;
+  margin-top: 12rpx;
+  letter-spacing: 4rpx;
+}
+#businessModul{
+  height: 45rpx;
+  margin-top: 12rpx;
+  margin-left: 30rpx;
+  border-radius: 10rpx;
+  background-color: #f59c30;
+}
+#businessText{
+    padding-left: 13rpx;
+    padding-right: 13rpx;
+    font-size: 28rpx;
+    letter-spacing: 4rpx;
+    font-family: AlibabaPuHuiTi-2-45-Light;
+    color: white;
+}
+/* 标签 */
+#LabelMoudle{
+  display: flex;
+  margin-top: 10rpx;
+  margin-left: -30rpx;
+}
+.LabelText{
+  font-size: 32rpx;
+  margin-left: 28rpx;
+  font-family: AlibabaPuHuiTi-2-45-Light;
+}
+/* 地址 */
+#addressModule{
+  margin-top: 8rpx;
+  width: 85%;
+  margin-left: 5rpx;
+}
+#addressText{
+  font-size: 28rpx;
+  letter-spacing:6rpx;
+  margin-left: -10rpx;
+  font-family: AlibabaPuHuiTi-2-45-Light;
+}
+#ddd{
+  height: 30rpx;
+}
+
+
+/* 订单信息 */
+#orderModul{
+ margin-top: 50rpx;
+}
+#Title{
+  font-family:AlibabaPuHuiTi-2-55-Regular ;
+  letter-spacing: 8rpx;
+  font-size: 38rpx;
+  margin-left: 28rpx;
+}
+#orderBox{
+  border: 1px solid #BBBBBB;
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 30rpx;
+  background-color: white;
+  margin-top: 40rpx;
+}
+#orderBox_one{
+  margin-top: 20rpx;
+}
+.oneBox{
+    display: flex;
+    font-family:AlibabaPuHuiTi-2-45-Light;
+    padding: 20rpx;
+}
+.oneBox_item{
+    font-size: 34rpx;
+    letter-spacing: 8rpx;
+}
+.oneBox_Content{
+      margin-left: 30rpx;
+      font-size: 34rpx;
+      letter-spacing: 4rpx;
+}
+
+/* 订单详细内容 */
+
+.twoBox{
+  display: flex;
+  font-family:AlibabaPuHuiTi-2-45-Light;
+  padding: 20rpx;
+}
+.twoBox_itm{
+  font-size: 34rpx;
+  letter-spacing: 8rpx;
+}
+.twoBox_content{
+  margin-left: 30rpx;
+  font-size: 34rpx;
+  letter-spacing: 4rpx;
+}
+#ticket_itemOne{
+  margin-left: 30rpx;
+  font-size: 34rpx;
+  letter-spacing: 4rpx;
+}
+#ticket_itenThree{
+  margin-left: 30rpx;
+  font-size: 34rpx;
+  letter-spacing: 4rpx;
+}
+#dd{
+  height: 40rpx;
+}
+
+#matchesContent{
+  font-family:AlibabaPuHuiTi-2-45-Light;
+  font-size: 30rpx;
+  margin-left: 30rpx;
+  margin-top: 5rpx;
+}
+/* 核销按钮 */
+#hexiaoBu{
+  margin-top: 100rpx;
+    width: 55%;
+    letter-spacing: 12rpx;
+    background-color: #f79d0d;
+    color: white;
+}
+#alreadyhexiaoBu{
+  margin-top: 100rpx;
+    width: 55%;
+    letter-spacing: 12rpx;
+    background-color:rgba(145, 143, 143, 0.637);
+    color: white;
+}
+#dddd{
+  height: 120rpx;
+}

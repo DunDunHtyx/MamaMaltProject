@@ -1,0 +1,58 @@
+<!--轮播图照片-->
+<swiper id="swiperBox" indicator-dots="{{indicatorDots}}" circular="true" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <swiper-item wx:for="{{imgUrls}}">
+    <image src="{{item}}" class="slide-image" />
+  </swiper-item>
+</swiper>
+<!--活动信息模块-->
+<view id="activityInfor">
+  <!-- 活动信息 -->
+  <view id="InforBOx">
+    <view id="title">欢乐谷7.25日亲子体验周</view>
+
+    <view id="attestationBOx">
+      <view id="attestationText">已官方认证</view>
+      <view id="type">
+        <view id="type_text">商家活动</view>
+      </view>
+    </view>
+
+    <view id="LabelBox">
+      <view class="LabelText">#游乐园</view>
+      <view class="LabelText">#亲子游</view>
+    </view>
+    <!--活动时间-->
+    <view id="ApplicationBox">
+      <view id="TimeBox">
+        <view id="TimeBoxText">活动时间:</view>
+        <view id="Time">{{activityInfo.activityDate}}-{{activityInfo.activityEndTime}}</view>
+      </view>
+    </view>
+    <!--地址-->
+    <view id="addressBox">
+      <image id="addresssImage" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/定位.png"></image>
+      <view id="addressText">北京东四环四方桥东南角</view>
+    </view>
+  </view>
+  <!--简介-->
+  <view id="brieflyText">简介</view>
+  <view id="brieflyBox">
+    <mp-html id="brieflyContent" content="{{activityInfo.activityOverview}}" />
+  </view>
+  <!--活动介绍-->
+  <view id="describesText">活动介绍</view>
+  <view id="describesBox">
+    <mp-html id="describesContent" content="{{activityInfo.activityRequest}}" />
+  </view>
+  <view id="dd"></view>
+</view>
+<!--预约栏-->
+<view id="BookBox">
+  <view id="CallBox" bindtap="goCall">
+    <image id="CallIcon" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/联系商家.png"></image>
+    <view id="CallText">联系商家</view>
+  </view>
+  <view id="book" bindtap="yuyue">
+    <view id="bookText" >预约</view>
+  </view>
+</view>

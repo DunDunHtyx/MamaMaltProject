@@ -1,0 +1,114 @@
+<!--旧物置换首页  -->
+<view>
+  <!--背景图片-->
+  <image id="backImage" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/background.jpg"></image>
+  <!-- 头部字体+搜索栏 -->
+  <view id="topModule">
+    <!-- 字体 -->
+    <view id="topFont">欢迎光临,麦芽妈妈的跳蚤市场</view>
+    <!-- 搜索栏 -->
+    <view id="searchModule">
+      <input id="searchInput" bindinput="getOldSearch" type="text" placeholder="{{placeholderText}}" />
+      <view id="searchTextBox" bindtap="Search">
+        <view id="searchText">搜索</view>
+      </view>
+    </view>
+  </view>
+  <!-- 下半部分 -->
+  <view id="activeBox" style="height:{{scrollViewHeight}}px ;">
+    <!--滚动选择框模块-->
+    <view id="gunDonBox">
+      <!--滑动选择框-->
+      <scroll-view scroll-x="true" class="nav" scroll-left="{{navScrollLeft}}">
+        <block wx:for="{{scrollTabItem}}" wx:key="index">
+          <view class="nav_item {{currentNav == index?'active':''}}" data-current="{{index}}" bindtap="switchNav">{{item.name}}</view>
+        </block>
+      </scroll-view>
+      <!--竖线-->
+      <view id="line"></view>
+      <!--图标-->
+      <image id="navIcon" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/classify.png"></image>
+    </view>
+
+    <!--下拉选择框-->
+    <view id="selectBox">
+      <!--综合-->
+      <view id="addressBox">
+        <picker mode="selector" range="{{sort}}" bindchange="getSort" id="locationSelect">
+          <view class="selBox">
+            <view class="selectedItem">{{showSort}}</view>
+            <image class="updownIcon" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/选择下拉.png"></image>
+          </view>
+        </picker>
+      </view>
+      <!-- 成色 -->
+      <view id="activeTypeBox">
+        <picker mode="selector" id="activeTypeSelect" range="{{quality}}" bindchange="getQuality">
+          <view class="selBox">
+            <view class="selectedItem">{{showQuality}}</view>
+            <image class="updownIcon" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/选择下拉.png"></image>
+          </view>
+        </picker>
+      </view>
+    </view>
+
+    <!--商品内容-->
+    <view id="commodityTotalBox">
+      <!-- 左半部分 -->
+      <view id="left">
+        <block wx:for="{{showRightGoods}}" wx:key="index" >
+          <template is="item" data="{{...item}}"  wx:if="{{index%2==0}}" />
+        </block>
+      </view>
+      <!-- 右半部分 -->
+      <view id="right">
+        <block wx:for="{{showRightGoods}}" wx:key="index">
+            <template is="item" data="{{...item}}" wx:if="{{index%2==1}}"  />
+        </block>
+      </view>
+      <view style="height:100rpx;"></view>
+    </view>
+
+
+    <!-- 卖闲置 -->
+    <image bindtap="addOldGoods" id="addIcon" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/添加.png"></image>
+    
+  </view>
+</view>
+
+<template name="item">
+  <!-- 商品个体项 -->
+  <view id="commodityBox" bindtap="goOldObjectDetail" data-oldgoodid="{{_id}}">
+  <view id="commodityImageBox">
+    <image id="commodityImage" mode="widthFix" src="{{goodImage}}" />
+  </view>
+    <!-- 标签部分 -->
+    <view id="commodityTitleBox">
+      <!-- 是否包邮 -->
+      <view id="orFreeShipping" style="display: {{IsTransport==true?'block':'none'}};">
+        <view id="FreeShippingText">包邮</view>
+      </view>
+      <!-- 成色 -->
+      <view id="qualityJudgment">
+        <view id="qualityJudgmentText" style="display: {{quality==='1'?'block':'none'}};" >全新</view>
+        <view id="qualityJudgmentText" style="display: {{quality==='2'?'block':'none'}};" >九成新</view>
+        <view id="qualityJudgmentText" style="display: {{quality==='3'?'block':'none'}};" >七成新</view>
+        <view id="qualityJudgmentText" style="display: {{quality==='4'?'block':'none'}};" >六成新</view>
+        <view id="qualityJudgmentText" style="display: {{quality==='5'?'block':'none'}};" >五成新</view>
+      </view>
+    </view>
+    <!-- 商品简介 -->
+    <view id="commodityIntroduce">
+      {{goodTitle}}
+    </view>
+    <!-- 商品价格 -->
+    <view id="commodityPrtice">
+      ￥{{goodPrtice}}
+    </view>
+    <!-- 发布者信息模块 -->
+    <view id="commodityPublicerBox">
+      <image id="publicerAvater" src="{{userImage}}" />
+      <view id="publicerNickName">{{userName}}</view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,234 @@
+@font-face {
+	font-family: AlibabaPuHuiTi-2-55-Regular;
+	src:url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.eot) format('embedded-opentype'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.otf) format('opentype'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.ttf) format('TrueType'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.woff) format('woff'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.woff2) format('woff2');
+}
+
+
+@font-face {
+	font-family: AlibabaPuHuiTi-2-45-Light;
+	src:url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.eot) format('embedded-opentype'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.otf) format('opentype'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.ttf) format('TrueType'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.woff) format('woff'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.woff2) format('woff2');
+}
+
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #FFF8F8;
+}
+/* 待付款显示 */
+.showAwaitMldule{
+    border-bottom: 1px solid gray;
+    height: 420rpx;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 30rpx;
+    background-color: white;
+}
+.showAwaitText{
+  font-size: 55rpx;
+  letter-spacing: 6rpx;
+  font-family: AlibabaPuHuiTi-2-55-Regular;
+  margin-top: 20rpx;
+}
+/* 提示 */
+.NoticeBox{
+    display: flex;
+    margin: 0 auto;
+    margin-top: 40rpx;
+    margin-left: 10rpx;
+    text-align: center;
+    /* border: 1px solid red; */
+    font-family: AlibabaPuHuiTi-2-45-Light;
+    font-size: 30rpx;
+    letter-spacing: 4rpx;
+}
+.NoticeTime{
+  /* text-align: center; */
+  font-family: AlibabaPuHuiTi-2-45-Light;
+  color: #e42c64;
+}
+/* 取消订单&去付款订单按钮 */
+.ButtonModule{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 60rpx;
+} 
+.cancleBox{
+    border: 1px solid #dd7777;
+}
+.cancleText{
+  padding: 10rpx;
+  width: 190rpx;
+  font-size: 35rpx;
+  letter-spacing: 4rpx;
+  color: #dd7777;
+  font-family: AlibabaPuHuiTi-2-45-Light;
+}
+.goPayBox{
+    /* padding: 10rpx; */
+    border: 1px solid #FE8402;
+}
+.goPayText{
+  width: 190rpx;
+  padding: 10rpx;
+  font-size: 35rpx;
+  letter-spacing: 4rpx;
+  color: #FE8402;
+  font-family: AlibabaPuHuiTi-2-45-Light;
+}
+
+/* 订单详细 */
+#orderDetailBox{
+    /* border: 1px solid red; */
+    margin-top: 30rpx;
+    
+}
+/* 商品信息 */
+#GoodInfoBox{
+      padding: 20rpx;
+      background-color: white;
+      border-bottom: 1px solid rgba(128, 128, 128, 0.342);
+      border-top: 1px solid rgba(128, 128, 128, 0.342);
+      /* border: 1px solid red; */
+  
+}
+#GoodTopBox{
+      display: flex;
+      margin-top: 10rpx;
+      border-bottom: 1px solid rgba(128, 128, 128, 0.336);
+      justify-content: space-around;
+}
+#GoodImage{
+    width: 25%;
+    height: 180rpx;
+    border-radius: 20rpx;
+}
+#GoodTopLeftBox{
+        width: 75%;
+        display: flex;
+}
+#GoodInclution{
+      width: 70%;
+      /* border: 1px solid red; */
+      font-size: 28rpx;
+      margin-left: 30rpx;
+      overflow: hidden;
+      text-overflow: ellipsis; 
+      display: -webkit-box;
+      -webkit-line-clamp:5;
+      -webkit-box-orient: vertical;
+      font-family: AlibabaPuHuiTi-2-45-Light;
+      letter-spacing: 4rpx;
+}
+#GoodPrtice{
+  font-family: AlibabaPuHuiTi-2-55-Regular;
+  font-size: 38rpx;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+  letter-spacing: 4rpx;
+}
+#GoodMiddleBox{
+    margin-top: 20rpx;
+}
+.GoodMiddleItemBox{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10rpx;
+}
+
+#GoodTotalText{
+  font-size: 32rpx;
+  letter-spacing: 4rpx;
+  font-family: AlibabaPuHuiTi-2-45-Light;
+}
+#GoodTotalPrtice{
+    font-size: 32rpx;
+    letter-spacing: 4rpx;
+}
+#GoodFreightText{
+  font-size: 32rpx;
+  letter-spacing: 4rpx;
+  font-family: AlibabaPuHuiTi-2-45-Light;
+}
+#GoodFreightPrtice{
+  font-size: 32rpx;
+  letter-spacing: 4rpx;
+}
+#FinallPrticeText{
+  font-size: 36rpx;
+  letter-spacing: 4rpx;
+  font-family: AlibabaPuHuiTi-2-55-Regular;
+}
+#FinallPrtice{
+    font-size: 36rpx;
+    font-family: AlibabaPuHuiTi-2-55-Regular;
+    letter-spacing: 4rpx;
+    color: red;
+}
+/* 收货地址 */
+#ShippingAddressBox{
+  margin-top:30rpx;
+  padding: 20rpx;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.342);
+  border-top: 1px solid rgba(128, 128, 128, 0.342);
+  background-color: white;
+}
+#ShippingAddressTitle{
+  font-family: AlibabaPuHuiTi-2-55-Regular;
+  font-size: 38rpx;
+  letter-spacing: 4rpx;
+}
+#ShippingAddressOne{
+  margin-top: 5rpx;
+  font-size: 33rpx;
+  letter-spacing: 4rpx;
+  font-family: AlibabaPuHuiTi-2-45-Light;
+}
+#ShippingAddressTwo{
+  width: 90%;
+  /* border: 1px solid red; */
+  font-size: 30rpx;
+  letter-spacing: 4rpx;
+  font-family: AlibabaPuHuiTi-2-45-Light;
+}
+/* 订单信息 */
+#GoodOrderBox{
+  margin-top:30rpx;
+  padding: 20rpx;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.342);
+  border-top: 1px solid rgba(128, 128, 128, 0.342);
+  background-color: white;
+}
+#GoodOrderTitle{
+  font-family: AlibabaPuHuiTi-2-55-Regular;
+  font-size: 38rpx;
+  letter-spacing: 4rpx;
+}
+#GoodOrderInfo{
+    /* border: 1px solid red; */
+    margin-top: 5rpx;
+}
+.GoodOrderItemBox{
+    display: flex;
+    margin-top: 5rpx;
+    justify-content: space-between;
+}
+.GoodOrderItem_one{
+  font-size: 33rpx;
+  letter-spacing: 6rpx;
+  font-family: AlibabaPuHuiTi-2-45-Light;
+}
+.GoodOrderItem_two{
+  font-size: 30rpx;
+  letter-spacing: 4rpx;
+  font-family: AlibabaPuHuiTi-2-45-Light;
+}

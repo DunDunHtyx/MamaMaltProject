@@ -1,0 +1,32 @@
+<view class="top" wx:for="{{detail}}">
+  <view class="top-le">
+    <image src="{{item.goodImage}}" mode="aspectFill"></image>
+  </view>
+  <view class="top-rig">
+    <view class="title">{{item.goodDescribe}}</view>
+    <view class="price">￥{{item.goodPrice}}</view>
+  </view>
+</view>
+
+<view class="middle">
+  <view class="addr">
+    <view class="middle-le">收货地址</view>
+    <view class="middle-rig">
+      <view class="personMessage">
+        王五 13082126645  
+      </view>
+      <view class="addrMessage">
+      北京市朝阳区望京广顺南大街21号
+      </view>
+    </view>
+  </view>
+  <view class="freight" wx:for="{{detail}}">
+    <view class="middle-le">运费</view>
+    <view class="middle-rig">￥{{item.freight}}</view>
+  </view>
+</view>
+
+<view class="bottom" wx:for="{{detail}}">
+  <view class="total">总计<text style="font-size: 50rpx;color: red;font-weight: 600;">￥{{item.goodPrice}}</text></view>
+  <view class="buy">确认购买</view>
+</view>

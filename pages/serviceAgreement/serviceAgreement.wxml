@@ -1,0 +1,10 @@
+
+<view id="title">
+    麦芽妈妈服务协议
+</view>
+<!-- 服务协议 -->
+<view id="contentBox"  >
+    <mp-html  content="{{serverContet}}" />
+</view>
+<view style="height: 50rpx;"></view>
+

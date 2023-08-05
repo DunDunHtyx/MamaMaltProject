@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "mp-html": "/miniprogram_npm/mp-html/index"
+  },
+  "navigationBarTitleText": "隐私协议"
+}

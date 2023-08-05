@@ -1,0 +1,91 @@
+<!-- 精彩瞬间详情 -->
+<!-- 用户 -->
+<view class="userBox">
+  <view class="userInfor">
+    <image class="userAvater" src="{{showWonderXQ.PubAvater}}"></image>
+    <view class="userName">{{showWonderXQ.PubNickname}}</view>
+  </view>
+  <view class="goRoom" bindtap="goRoom" data-Publicer="{{showWonderXQ.PublicerID}}" >
+    <view class="goRoomText">进空间</view>
+  </view>
+</view>
+<view>
+  <!-- 轮播图 -->
+  <swiper class="swiperBox" circular indicator-dots indicator-color="#f6f6f6" indicator-active-color="#cacaca">
+    <block>
+      <swiper-item class="swiperImage" wx:for="{{showWonderXQ.Images}}" wx:key="index">
+        <image class="swiperImage" src="{{item}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 内容 -->
+  <view class="WonderContentBox">
+    <mp-html class="WonderContent" content="{{showWonderXQ.wonderContent}}" />
+    <!-- 发布时间 -->
+    <view class="publishTime">
+      {{showWonderXQ.PublishTime}}
+    </view>
+  </view>
+  <!-- 本活动信息 -->
+  <view class="actInforBox">
+    <image class="showImage" src="{{showWonderXQ.ActImage}}"></image>
+    <view class="actDetailInfoBox">
+      <view class="actName">{{activityDetail.activityTheme}}</view>
+      <view class="actAddress">地点:{{activityDetail.activityToTalAddress}}</view>
+    </view>
+    <view class="goAct" bindtap="goActivity">
+      <view class="goActText">瞅瞅</view>
+    </view>
+  </view>
+
+  <!--评论模块-->
+  <view id="commendBoxs">
+    <view id="commendTitles">评论</view>
+    <view id="commendModul" wx:for="{{comments}}" wx:key="index">
+      <!--用户信息-->
+      <view id="userBox">
+        <view id="user_one">
+          <image id="avater" src="{{item.avater}}"></image>
+          <view id="nickName">{{item.userName}}</view>
+        </view>
+        <image id="trash" src="/image/deleat.png" bindtap="remove" data-id="{{item._id}}" style="display: {{item.userID==userID?'':'none'}};"></image>
+      </view>
+      <!--内容-->
+      <view id="CommendContent">{{item.content}}</view>
+      <view id="time">{{item.pubshTime}}</view>
+    </view>
+  </view>
+
+  <!--点赞评论框-->
+  <view id="toolModul">
+    <view id="toolBox">
+      <!--评论框-->
+      <input placeholder="评价两句" disabled="true" bindtap="show" id="commentInput" type="text" />
+      <!--点赞 收藏 转发 框-->
+      <view id="tool_oneBox">
+        <!--查看评论 模块-->
+        <view bindtap="toViewBottomFun">
+          <image class="icon" src="/image/message.png"></image>
+        </view>
+        <!--点赞模块-->
+        <view class="iconBox">
+          <image class="icon" bindtap="goDianzan" src="{{orDianzan?'/image/aleadyKudos.png':'/image/Kudos.png'}}" bindtap="goDianzan"></image>
+          <view class="number">{{dianzan}}</view>
+        </view>
+        <!--收藏模块-->
+        <view class="iconBox">
+          <image class="icon" bindtap="goShoucang" src="{{orShoucang?'/image/aleadyCollection.png':'/image/collection.png'}}" bindtap="goShoucang"></image>
+          <view class="number">{{shouchang}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!--遮罩层-->
+<view id="hide" bindtap="conceal" style="display:{{OrHidden?'':'none'}};"></view>
+<!--评论输入框-->
+<view id="commendBox" style="display:{{OrHidden?'':'none'}};">
+  <textarea placeholder="写评论...." confirm-type="done" bindinput="getInput" auto-focus="true" id="commendInput" cols="30" rows="5"></textarea>
+  <view id="publish" bindtap="addComments">发布</view>
+</view>
+<view id="xx"></view>

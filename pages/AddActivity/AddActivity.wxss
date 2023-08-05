@@ -1,0 +1,61 @@
+page{
+  background-color: #FFF8F8;
+}
+.top{
+  width: 94%;
+  height: 430rpx;
+  border: 1px solid gainsboro;
+  background-color: white;
+  margin: 0 auto;
+  border-radius: 20rpx;
+}
+  .upload{
+    margin-left: 30rpx;
+    margin-top: 30rpx;
+    width: 150rpx;
+    height: 150rpx;
+    /* border: 1px solid red; */
+  }
+    .upload image{
+      width: 150rpx;
+      height: 150rpx;
+    }
+  .inputT{
+    width: 94%;
+    height: 70rpx;
+    border-bottom: 1px solid gray;
+    margin-left: 30rpx;
+    font-size: 30rpx;
+
+  }
+  .inputR{
+    width: 94%;
+    height: 170rpx;
+    /* border: 1px solid red; */
+    margin-left: 30rpx;
+    font-size: 30rpx;
+    margin-top: 10rpx;
+  }
+
+
+
+
+.bottom{
+  width: 94%;
+  height: 450rpx;
+  border: 1px solid gainsboro;
+  background-color: white;
+  margin: 0 auto;
+  border-radius: 20rpx;
+}
+
+.bto{
+  background-color: #e99d42;
+  color: white;
+  margin-top: 60rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 50rpx;
+  font-weight: 500;
+  font-size: 38rpx;
+}

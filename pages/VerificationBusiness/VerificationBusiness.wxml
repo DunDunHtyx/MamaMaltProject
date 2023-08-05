@@ -1,0 +1,72 @@
+<!--活动信息-->
+<view id="activityMoBox">
+  <view id="activityMoudle">
+    <!--活动照片-->
+    <view id="ActivityImageBox">
+      <image id="showImage" mode="heightFix" src="{{activityInformation.activityImage}}"></image>
+    </view>
+    <!--活动信息-->
+    <view id="activityInformation">
+      <!--主题-->
+      <view id="title">{{activityInformation.activityTheme}}</view>
+      <!--认证信息-->
+      <view id="authenticationModul">
+        <view id="officalText">已官方认证</view>
+        <view id="businessModul" style="display: {{activityInformation.activityType==1?'block':'none'}};">
+          <view id="businessText">商家活动</view>
+        </view>
+      </view>
+      <!--标签-->
+      <view id="LabelMoudle" >
+        <view class="LabelText"wx:for="{{activityInformation.activityTitle}}" >#{{item}}</view>
+      </view>
+      <!--地址-->
+      <view id="addressModule">
+        <view id="addressText">{{activityInformation.activityToTalAddress}}</view>
+      </view>
+    </view>
+  </view>
+  <view id="ddd"></view>
+</view>
+
+
+<!--订单详细-->
+<view id="orderModul">
+  <view id="Title">订单信息</view>
+  <view id="orderBox">
+    <view id="orderBox_one">
+      <view class="oneBox">
+        <view class="oneBox_item">姓名</view>
+        <view class="oneBox_Content">{{orderInformation.ContactName}}</view>
+      </view>
+      <view class="oneBox">
+        <view class="oneBox_item">联系电话</view>
+        <view class="oneBox_Content">{{orderInformation.ContactPhone}}</view>
+      </view>
+    </view>
+    <view id="orderBox_two">
+      <view class="twoBox">
+        <view class="twoBox_itm">场次</view>
+        <view id="matchesContent">{{matchesInformation.ticketTime}}</view>
+      </view>
+      <view class="twoBox">
+        <view class="twoBox_itm">票档</view>
+        <view id="ticket_itemOne">{{ticketInformation[0]}}</view>
+        <view id="ticket_itenThree">{{ticketInformation[1]}}×2</view>
+      </view>
+      <view class="twoBox">
+        <view class="twoBox_itm">预定时间</view>
+        <view class="twoBox_content">{{orderInformation.bookTime}}</view>
+      </view>
+      <view class="twoBox">
+        <view class="twoBox_itm">总计</view>
+        <view class="twoBox_content">￥{{orderInformation.ticketTotalPrtice}}</view>
+      </view>
+    </view>
+  <view id="dd"></view>
+  </view>
+</view>
+
+<button id="hexiaoBu" bindtap="Verification" style="display:{{orderInformation.orVerification==false?'block':'none'}};">核销</button>
+<button id="alreadyhexiaoBu" style="display: {{orderInformation.orVerification==true?'block':'none'}};">已核销</button>
+<view id="dddd"></view>

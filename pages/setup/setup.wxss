@@ -1,0 +1,34 @@
+
+@font-face {
+	font-family: AlibabaPuHuiTi-2-45-Light;
+	src:url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.eot) format('embedded-opentype'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.otf) format('opentype'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.ttf) format('TrueType'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.woff) format('woff'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.woff2) format('woff2');
+}
+
+
+
+page{
+    width: 100%;
+    height: 100%;
+    background-color:#FFF8F8 ;
+}
+#ContentBOX{
+    border: 1px solid gray;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 80rpx;
+    background-color: white;
+    border-radius: 20rpx;
+}
+.ItemBox{
+    padding: 30rpx;
+    /* border-bottom: 1px solid gray; */
+    font-family: AlibabaPuHuiTi-2-45-Light;
+}
+.ItemText{
+    font-size: 36rpx;
+    letter-spacing: 4rpx;
+}

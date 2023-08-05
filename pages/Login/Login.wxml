@@ -1,0 +1,25 @@
+<!--登录页-->
+<view id="totalPage">
+  <!---背景图片--->
+  <image id="background" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/花海.jpg"></image>
+  <!--logo-->
+  <image id="Logo" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/MaltMomLogo.png"></image>
+
+  <!--一键登录按钮-->
+  <button id="loginButton" bindtap="Login">
+    <label id="text">微信一键登录注册</label>
+  </button>
+
+
+  <view id="check">
+    <van-checkbox id="checkBoxs" value="{{checked}}" checked-color="#1fbf39" bind:change="onChange"></van-checkbox>
+    <label id="agreelabel">
+      <view id="agreeBox">
+        我已阅读并同意
+        <text bindtap="goServerAgreement" class="agreeText" url="../serviceAgreement/serviceAgreement">《麦芽妈妈服务协议》</text>
+        和
+        <text bindtap="goPrivacyAgreement" class="agreeText" url="../privacyAgreement/privacyAgreement">《隐私协议》</text>
+      </view>
+    </label>
+  </view>
+</view>

@@ -1,0 +1,168 @@
+<scroll-view id="OneTab" scroll-x class="bg-white nav">
+  <view class="flex text-center">
+    <view class="cu-item flex-sub {{index==TabCur?'text-orange cur':''}}" wx:for="{{showTab}}" wx:key bindtap="tabSelect" data-id="{{index}}">
+      {{item}}
+    </view>
+  </view>
+</scroll-view>
+
+<!-- 我买到页 内容展示 -->
+<view id="MyBuyBox" wx:for="{{showGoodInfo}}" wx:if="{{choiceType==2}}">
+  <!-- 头部 -->
+  <view id="MybuyTopMoudle">
+    <view id="TopMoudle_one">
+      <image id="avaterImage" src="{{item.userImage}}" mode="" />
+      <view id="nickName">{{item.userName}}</view>
+    </view>
+    <view id="goodState" style="display: {{(item.BuyGoodsState==1&&item.GoodsTransportState==0)?'block':'none'}};">待发货</view>
+    <view id="goodState" style="display: {{(item.BuyGoodsState==1&&item.GoodsTransportState==1)?'block':'none'}};">待收货</view>
+    <view id="goodState" style="display: {{(item.BuyGoodsState==1&&item.GoodsTransportState==2)?'block':'none'}};">已签收</view>
+    <view id="goodState" style="display: {{(item.BuyGoodsState==1&&item.GoodsTransportState==3)?'block':'none'}};">交易完成</view>
+    <view id="goodState" style="display: {{(item.BuyGoodsState==0&&item.GoodsTransportState==-1)?'block':'none'}};">待付款</view>
+    <view id="goodState" style="display: {{(item.BuyGoodsState==2)?'block':'none'}};">退款中</view>
+    <view id="goodState" style="display: {{(item.GoodsTransportState==4)?'block':'none'}};">退款成功</view>
+  </view>
+  <!-- 中部 -->
+  <view id="MybuyCentralModule">
+    <image id="GoodImage" src="{{item.goodImage}}" mode="" />
+    <view id="GoodInclucation">
+      {{item.goodTitle}}
+    </view>
+  </view>
+  <view id="AcctulyPay">
+    <view id="AcctullyPayText" style="display: {{item.BuyGoodsState==0?'none':'block'}};">实付款:</view>
+    <view id="AcctullyPayNumber" style="display: {{item.BuyGoodsState==0?'none':'block'}};">￥{{item.finallPrtice}}</view>
+    <view id="AcctullyPayText" style="display: {{item.BuyGoodsState==0?'block':'none'}};">应付款:</view>
+    <view id="AcctullyPayNumber" style="display: {{item.BuyGoodsState==0?'block':'none'}};">￥{{item.totalPrtice}}</view>
+  </view>
+  <!--底部 -->
+  <view id="MyBuyMiddleBox">
+    <!-- 查看详细 -->
+    <view class="MyBuyButton" style="border: 1px solid  #f29c2b; " bindtap="DetailOrder" data-orderID="{{item._id}}">
+      <view class="MyBuy_text" style="color: #f29c2b; ">查看详细</view>
+    </view>
+
+    <!-- 联系商家 -->
+    <view class="MyBuyButton" style="border: 1px solid  #f5587b; display: {{item.BuyGoodsState==2?'block':'none'}};" bindtap="contentBusser" data-busserphone="{{item.truePhone}}">
+      <view class="MyBuy_text" style="color: #f5587b; display: {{item.BuyGoodsState==2?'block':'none'}};">联系商家</view>
+    </view>
+
+    <!-- 确认收货 -->
+    <view class="MyBuyButton" style="display: {{ (item.BuyGoodsState==1&&item.GoodsTransportState==1)?'block':'none'}}; border: 1px solid  #05445c;" bindtap="ConfirmReceipt" data-orderID="{{item._id}}">
+      <view class="MyBuy_text" style="display: {{item.GoodsTransportState==1?'block':'none'}}; color: #05445c;">确认收货</view>
+    </view>
+
+
+    <!-- 去支付 -->
+    <view style="display: {{item.BuyGoodsState==0?'block':'none'}}; border: 1px solid  #bc8420;" class="MyBuyButton" bindtap="GoPay" data-orderID="{{item._id}}">
+      <view class="MyBuy_text" style="display: {{item.BuyGoodsState==0?'block':'none'}}; color: #bc8420;">去付款</view>
+    </view>
+
+    <!-- 取消订单 -->
+    <view style="display: {{item.BuyGoodsState==0?'block':'none'}}; border: 1px solid  #f06966;" class="MyBuyButton" bindtap="cancelOldGoodOrder" data-orderID="{{item._id}}">
+      <view class="MyBuy_text" style="display: {{item.BuyGoodsState==0?'block':'none'}}; color: #f06966;">取消订单</view>
+    </view>
+
+  </view>
+  <view style="height: 10rpx;"></view>
+</view>
+
+<!-- 我卖出页面 -->
+<view id="MyBuyBox" wx:for="{{showGoodInfo}}" wx:if="{{choiceType==1}}">
+  <!-- 头部 -->
+  <view id="MybuyTopMoudle">
+    <view id="TopMoudle_one">
+      <image id="avaterImage" src="{{item.userImage}}" mode="" />
+      <view id="nickName">{{item.userName}}</view>
+    </view>
+    <view id="goodState" style="display: {{item.GoodsTransportState==0?'block':'none'}};">等待发货</view>
+    <view id="goodState" style="display: {{item.GoodsTransportState==1?'block':'none'}};">等待收货</view>
+    <view id="goodState" style="display: {{item.GoodsTransportState==2?'block':'none'}};">买家已签收</view>
+    <view id="goodState" style="display: {{item.GoodsTransportState==3?'block':'none'}};">交易完成</view>
+    <view id="goodState" style="display: {{item.GoodsTransportState==-1?'block':'none'}};">等待付款</view>
+    <view id="goodState" style="display: {{(item.GoodsTransportState==4)?'block':'none'}};">退款成功</view>
+  </view>
+  <!-- 中部 -->
+  <view id="MybuyCentralModule">
+    <image id="GoodImage" src="{{item.goodImage}}" mode="" />
+    <view id="GoodInclucation">
+      {{item.goodTitle}}
+    </view>
+  </view>
+  <view id="AcctulyPay">
+    <view id="AcctullyPayText" style="display: {{item.BuyGoodsState==0?'none':'block'}};">实付款:</view>
+    <view id="AcctullyPayNumber" style="display: {{item.BuyGoodsState==0?'none':'block'}};">￥{{item.finallPrtice}}</view>
+    <view id="AcctullyPayText" style="display: {{item.BuyGoodsState==0?'block':'none'}};">应付款:</view>
+    <view id="AcctullyPayNumber" style="display: {{item.BuyGoodsState==0?'block':'none'}};">￥{{item.totalPrtice}}</view>
+  </view>
+  <!--底部 -->
+  <view id="MyBuyMiddleBox">
+
+    <!-- 填写单号  // 付款成功 + 已付款,未发货 -->
+    <view class="MyBuyButton" style="border: 1px solid  #f29c2b; display: {{(item.BuyGoodsState==1&&item.GoodsTransportState==0)?'block':'none'}};" bindtap="writeTrackingNumber" data-orderid="{{item._id}}">
+      <view class="MyBuy_text" style="color: #f29c2b; display: {{(item.BuyGoodsState==1&&item.GoodsTransportState==0)?'block':'none'}};">填写单号</view>
+    </view>
+
+    <!-- 查看订单详情  /  付款成功 -->
+    <view class="MyBuyButton" style=" border: 1px solid  #05445c;" bindtap="DetailOrder" data-orderid="{{item._id}}">
+      <view class="MyBuy_text" style=" color: #05445c;">订单详情</view>
+    </view>
+
+    <!-- 退款 -->
+    <view bindtap="BackPrtice" data-orderid="{{item._id}}" style="display: {{item.BuyGoodsState==2?'block':'none'}}; border: 1px solid  #f06966;" class="MyBuyButton">
+      <view class="MyBuy_text" style="display: {{item.BuyGoodsState==2?'block':'none'}}; color: #f06966;">退款</view>
+    </view>
+
+
+  </view>
+  <view style="height: 10rpx;"></view>
+</view>
+
+
+<!--我发布的 内容展示页面  -->
+<view id="MyPublishBox" wx:for="{{showGoodInfo}}" wx:if="{{choiceType==0}}">
+  <view id="MyPublishGoodInfo">
+    <view id="MyPublishGoodInfoItem">
+      <!-- 商品照片模块 -->
+      <image id="MyPublishGoodImage" src="{{item.goodImage}}" mode="" />
+      <view id="MyPublishGoodRightBox">
+        <!-- 商品表示 -->
+        <view id="MyPublishGoodNotice">
+          <!-- 是否包邮 -->
+          <view class="NoticeBox"  style=" display: {{item.IsTransport==true?'block':'none'}};  background-color: #70bef2;" >
+            <view class="NoticeText" style="color:white;" >包邮</view>
+          </view>
+          <!-- 物品品质 -->
+          <view class="NoticeBox" style="background-color: white; border: 1px solid red;" >
+            <view class="NoticeText" style="color: red;" >全新</view>
+          </view>
+        </view>
+
+        <!-- 商品描述 -->
+        <view id="MyPublishIncludtion">
+          {{item.goodTitle}}
+        </view>
+        <!-- 商品价格 -->
+        <view id="MyPublishGoodPrtice">
+          ￥{{item.goodPrtice}}
+        </view>
+        <!-- 按钮 -->
+        <view id="ButtonModule">
+        <!-- 商品详情 -->
+          <view class="ButtonBox" style="border: 2px solid #e4945f ;" bindtap="goGoodDetail" data-GoodID="{{item._id}}"   >
+            <view class="ButtonText" style="color: #e4945f;">商品详情</view>
+          </view>
+        <!--重新上架-->
+        <view class="ButtonBox"  bindtap="RrturnListing" data-GoodID="{{item._id}}" style="border: 2px solid #ee9b9b ; display: {{item.goodState==1?'block':'none'}};"   >
+            <view class="ButtonText" style="color:#ee9b9b;">重新上架</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view style="height:15rpx;"></view>
+  </view>
+</view>
+
+
+
+<view style="height: 100rpx;"></view>

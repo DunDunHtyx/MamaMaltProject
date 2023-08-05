@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-uploader": "@vant/weapp/uploader/index",
+    "mp-html": "/miniprogram_npm/mp-html/index"
+  },
+  "navigationBarTitleText": "发布精彩瞬间"
+}

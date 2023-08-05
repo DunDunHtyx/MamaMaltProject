@@ -1,0 +1,69 @@
+<!-- 待付款页 -->
+<view>  
+    <!-- 待付款显示 -->
+    <view class="showAwaitMldule">
+      <!-- 待付款显示 -->
+        <view class="showAwaitText">
+            待付款
+            <van-count-down time="{{ time }}" bind:finish="EndTime" />
+        </view>
+      <!--提示 -->
+        <view class="NoticeBox">
+          请在 <view class="NoticeTime">15分钟</view>内完成订单,过时订单会自动取消
+        </view>
+        <!-- 取消订单&去付款按钮 -->
+        <view class="ButtonModule">
+          <!-- 取消订单按钮 -->
+          <view class="cancleBox" bindtap="cancleOrder">
+              <view class="cancleText">
+                取消订单
+              </view>
+          </view>
+          <!-- 去付款按钮 -->
+          <view class="goPayBox" bindtap="SubmitOrder" > 
+            <view class="goPayText">
+              去付款
+            </view>
+          </view>
+        </view>
+    </view>
+    <!-- 订单具体内容 -->
+    <view class="orderDetailModule">
+      <view class="showOrderDetail">
+        订单信息
+      </view>
+      <view class="showOrderDetailBox">
+        <!-- 姓名 -->
+        <view class="showItem">
+          <view class="showItem_one">姓名</view>
+          <view class="showItem_two">{{orderInfor.ContactName}}</view>
+        </view>
+        <!-- 联系电话 -->
+        <view class="showItem">
+          <view class="showItem_one">联系电话</view>
+          <view class="showItem_two">{{orderInfor.ContactPhone}}</view>
+        </view>
+        <!-- 场次 -->
+        <view class="showItems">
+          <view class="showItem_ones">场次</view>
+          <view class="showItem_twos">{{ordMatchInfor.ticketTime}}</view>
+        </view>
+        <!-- 票档 -->
+        <view class="showItem">
+          <view class="showItem_one">票档</view>
+          <view class="showItem_two">{{ordTicketType.ticketName}}×{{orderInfor.ticketNumber}}</view>
+        </view>
+        <!-- 预定时间 -->
+        <view class="showItem">
+          <view class="showItem_one">预定时间</view>
+          <view class="showItem_two">{{orderInfor.bookTime}}</view>
+        </view>
+        <!-- 总计-->
+        <view class="showItem">
+          <view class="showItem_one">总计</view>
+          <view class="showItem_two">￥{{orderInfor.ticketTotalPrtice}}</view>
+        </view>
+      <view id="xx"></view>
+      </view>
+    </view>
+</view>

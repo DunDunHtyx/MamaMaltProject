@@ -1,0 +1,155 @@
+
+@font-face {
+	font-family: AlibabaPuHuiTi-2-55-Regular;
+	src:url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.eot) format('embedded-opentype'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.otf) format('opentype'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.ttf) format('TrueType'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.woff) format('woff'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: AlibabaPuHuiTi-2-45-Light;
+	src:url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.eot) format('embedded-opentype'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.otf) format('opentype'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.ttf) format('TrueType'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.woff) format('woff'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.woff2) format('woff2');
+}
+
+
+
+
+page{
+  width: 100%;
+  height: 100%;
+}
+/* 搜索框 */
+.searchBox{
+    /* border: 1px solid red; */
+    display: flex;
+    width: 98%;
+    margin: 0 auto;
+    margin-top: 30rpx;
+    padding: 20rpx;
+    justify-content: space-between;
+}
+.search_one{
+    padding: 10rpx;
+    padding-left: 20rpx;
+    width: 85%;
+    display: flex;
+    border-radius: 20rpx;
+    background-color: #f4f0e6;
+
+}
+.searchOne_icon{
+    width: 40rpx;
+    height: 40rpx;
+}
+.searchOne_input{
+  font-family: AlibabaPuHuiTi-2-45-Light;
+  margin-left: 10rpx;
+  /* border: 1px solid red; */
+  width: 90%;
+  letter-spacing: 4rpx;
+}
+.search_two{
+  font-size: 36rpx;
+  letter-spacing: 4rpx;
+  margin-top: 5rpx;
+	font-family: AlibabaPuHuiTi-2-55-Regular;
+}
+/*搜索到的活动 */
+.ContentBox{
+    /* border: 1px solid red; */
+    padding: 20rpx;
+}
+.showText{
+  font-family: AlibabaPuHuiTi-2-55-Regular;
+  font-size: 38rpx;
+  letter-spacing: 6rpx;
+}
+/* 活动内容 */
+.ActContentBox{
+    /* border: 1px solid red; */
+    /* margin-top: 10rpx; */
+}
+/* 具体活动内容 */
+.ActDetalBox{
+    /* border: 1px solid red; */
+    display: flex;
+    margin-top: 40rpx;
+}
+.ActImage{
+      width: 120rpx;
+      height: 170rpx;
+      /* border: 1px solid red; */
+      border-radius: 12rpx;
+      /* height: 100rpx; */
+}
+.ActInformationBox{
+      /* border: 1px solid red; */
+      width: 80%;
+      margin-left: 20rpx;
+}
+.ActTitle{
+  font-family: AlibabaPuHuiTi-2-45-Light;
+  /* border: 1px solid red; */
+  vertical-align: middle;
+  /* line-height: 86rpx; */
+  height:86rpx;
+  font-size: 30rpx;
+  letter-spacing: 2rpx;
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  display: -webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient: vertical;
+}
+.ActTitles{
+  font-family: AlibabaPuHuiTi-2-45-Light;
+  /* border: 1px solid red; */
+  font-size: 30rpx;
+  margin-top: 10rpx;
+  letter-spacing: 2rpx;
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  display: -webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient: vertical;
+}
+.ActOneBOx{
+  font-family: AlibabaPuHuiTi-2-45-Light;
+  letter-spacing: 2rpx;
+}
+.ActTime{
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  display: -webkit-box;
+  -webkit-line-clamp:1;
+  -webkit-box-orient: vertical;
+}
+.ActTimes{
+  margin-top: 15rpx;
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  display: -webkit-box;
+  -webkit-line-clamp:1;
+  -webkit-box-orient: vertical;
+}
+.ActAddress{
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  display: -webkit-box;
+  -webkit-line-clamp:1;
+  -webkit-box-orient: vertical;
+}
+.ActAddresss{
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  display: -webkit-box;
+  -webkit-line-clamp:1;
+  -webkit-box-orient: vertical;
+  margin-top: 15rpx;
+}

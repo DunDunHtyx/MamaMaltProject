@@ -1,0 +1,73 @@
+<!--能不能吃-->
+<view style=" height: 100%;">
+  <!--第一行导航栏-->
+  <view class="flex nav">
+    <view class="nav-item  {{index==current?'text-selected current':''}}" wx:for="{{tabs}}" wx:key bindtap="tabSelect" data-id="{{index}}">
+      {{item}}
+    </view>
+  </view>
+
+  <!--第二行导航栏-->
+  <view class="flex tap"   >
+    <view class="Label {{index==top?'selected':''}}" wx:for="{{tab}}" wx:key bindtap="tabSelect1" data-id="{{index}}">
+      {{item}}
+    </view>
+  </view>
+
+  <!--内容模块-->
+  <view class="shopping">
+    <!--小 内容模块-->
+    <view bindtap="goOrRateXQ" data-_id="{{item._id}}" class="shopping-item" wx:for="{{finallEat}}">
+      <view class="shopping-lift">
+        <view class="shopping-tittle">{{item.eatNmae}}</view>
+        <view class="shopping-Features">
+
+          <view class="Features-item">
+
+            <view class="item-item">
+              <view class="duihao">
+                <image src="/image/greenTick.png"  style="width: 46rpx; height: 46rpx;margin-top: 10rpx; display: {{item.pregnantEatType==2?'':'none'}};"></image>
+                <image src="/image/NotEat.png" style="width: 46rpx; height: 46rpx;margin-top: 10rpx; display: {{item.pregnantEatType==0?'':'none'}};"></image>
+                <image src="/image/eatLess.png" style="width: 46rpx; height: 46rpx;margin-top: 10rpx; display: {{item.pregnantEatType==1?'':'none'}};"></image>
+              </view>
+              <view class="text">孕期</view>
+            </view>
+
+            <view class="item-items">
+              <view class="duihao">
+                <image src="/image/greenTick.png"  style="width: 46rpx; height: 46rpx;margin-top: 10rpx; display: {{item.confinedEatType==2?'':'none'}};"></image>
+                <image src="/image/NotEat.png" style="width: 46rpx; height: 46rpx;margin-top: 10rpx; display: {{item.confinedEatType==0?'':'none'}};"></image>
+                <image src="/image/eatLess.png" style="width: 46rpx; height: 46rpx;margin-top: 10rpx; display: {{item.confinedEatType==1?'':'none'}};"></image>
+              </view>
+              <view class="text">月子</view>
+            </view>
+
+          </view>
+
+
+          <view class="Features-item">
+            <view class="item-item">
+              <view class="duihao">
+                <image src="/image/greenTick.png"  style="width: 46rpx; height: 46rpx;margin-top: 10rpx; display: {{item.lactationEatType==2?'':'none'}};"></image>
+                <image src="/image/NotEat.png" style="width: 46rpx; height: 46rpx;margin-top: 10rpx; display: {{item.lactationEatType==0?'':'none'}};"></image>
+                <image src="/image/eatLess.png" style="width: 46rpx; height: 46rpx;margin-top: 10rpx; display: {{item.lactationEatType==1?'':'none'}};"></image>
+              </view>
+              <view class="text">哺乳</view>
+            </view>
+            <view class="item-items">
+              <view class="duihao">
+                <image src="/image/greenTick.png"  style="width: 46rpx; height: 46rpx;margin-top: 10rpx; display: {{item.babyEattype==2?'':'none'}};"></image>
+                <image src="/image/NotEat.png" style="width: 46rpx; height: 46rpx;margin-top: 10rpx; display: {{item.babyEattype==0?'':'none'}};"></image>
+                <image src="/image/eatLess.png" style="width: 46rpx; height: 46rpx;margin-top: 10rpx; display: {{item.babyEattype==1?'':'none'}};"></image>
+              </view>
+              <view class="text">{{item.babyAgeRange}}宝宝</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="shopping-img">
+        <image src="{{item.eatImage}}" style="height: 190rpx; width: 90%; margin-top: -5rpx;  border-radius: 30rpx;"></image>
+      </view>
+    </view>
+  </view>
+</view>

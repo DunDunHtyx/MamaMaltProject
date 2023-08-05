@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "mp-html": "/miniprogram_npm/mp-html/index"
+  },
+  "navigationBarTitleText": "商家活动详情页"
+}

@@ -1,0 +1,26 @@
+<view class="top">
+  <view class="upload">
+  <image src="../image/上传.png"></image>
+  </view>
+  <view class="topic">
+    <input type="text" class="inputT" placeholder="编写活动主题会有更多人浏览哦" placeholder-style="color:gray"></input>
+  </view>
+  <view class="reason">
+    <scroll-view scroll-y="true">
+      <textarea type="text" class="inputR" placeholder="写一些关于本次活动举办的原因或想法吧" placeholder-style="font-size:30rpx;line-height:10rpx;"></textarea>
+    </scroll-view>
+  </view>
+</view>
+
+
+
+<view style="margin-left:28rpx;font-family: AlibabaPuHui;font-weight: 600;font-size: 34rpx;">详细内容</view>
+<view class="bottom">
+  <input type="text" class="inputT" placeholder="参加人数" placeholder-style="color:black;font-size:34rpx" style="margin-top: 10rpx;"></input>
+  <input type="text" class="inputT" placeholder="参加时间" placeholder-style="color:black;font-size:34rpx" style="margin-top: 10rpx;"></input>
+  <input type="text" class="inputT" placeholder="参加地点" placeholder-style="color:black;font-size:34rpx" style="margin-top: 10rpx;"></input>
+  <input type="text" class="inputT" placeholder="标签" placeholder-style="color:black;font-size:34rpx" style="margin-top: 10rpx;"></input>
+  <textarea type="text" class="inputR" placeholder="要求" placeholder-style="font-size:30rpx;line-height:10rpx;color:black"></textarea>
+</view>
+
+<button class="bto">发布</button>

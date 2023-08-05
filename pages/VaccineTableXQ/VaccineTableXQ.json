@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "mp-html": "/miniprogram_npm/mp-html/index"
+  },
+  "navigationBarTitleText": "疫苗详情表"
+}

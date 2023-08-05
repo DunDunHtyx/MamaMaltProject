@@ -1,0 +1,55 @@
+<!-- 美好瞬间 内容模块 -->
+<view class="wonderfulMoments">
+  <!-- 左半部分 -->
+  <view id="left">
+    <block wx:for="{{showWonder}}" wx:key="index"  >
+      <template is="item" data="{{...item}}" wx:if="{{index%2==0}}"></template>  
+    </block>
+  </view>
+  <!-- 右半部分 -->
+  <view id="right">
+    <block wx:for="{{showWonder}}" wx:key="index">
+      <template is="item" data="{{...item}}" wx:if="{{index%2==1}}"></template>
+    </block>
+  </view>
+  <!-- 发布美好瞬间部分 -->
+  <view class="addWonder" bindtap="GoPublishWonder">
+    <image class="addWonder_icon" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/add.png" ></image>
+  </view>
+</view>
+
+
+<!-- 使用模板 自定义代码块 -->
+<template name="item">
+  <view class="item" bindtap="getWonderXQ" data-WonderID="{{_id}}">
+    <!--照片  -->
+    <image class="item_img" src="{{Images[0]}}" mode="widthFix" ></image>
+    <!-- 视频 -->
+    <!-- <video class="item_video" src=""></video> -->
+    <!-- 文本内容 -->
+    <mp-html id="textContent" content="{{wonderContent}}" />
+    <!-- 发布者内容 -->
+    <view id="PublisherInformation" >
+      <view id="PublisherBox">
+        <image id="avater" src="{{PubAvater}}"></image>
+        <view id="NickName">{{PubNickname}}</view>
+      </view>
+    </view>
+    <!-- 活动内容 -->
+    <view id="activityInformation" bindtap="getActID" data-ActID="{{RelationalActivityID}}">
+      <image id="activityImage" src="{{ActImage}}"  ></image>
+      <view id="activityBox">
+        <view id="activityTitle">{{ActName}}</view>
+        <view id="activityBox_one">
+          <view id="one_prtice">￥{{ActPrtice}}</view>
+          <view id="one_notice">起</view>
+        </view>
+      </view>
+    </view>
+    <view id="xx"></view>
+  </view>
+  <view id="xxx"></view>
+</template>
+
+
+

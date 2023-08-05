@@ -1,0 +1,39 @@
+<!-- 帖子页 -->
+<view id="PostItemMoudle" wx:for="{{showWonder}}" >
+    <!-- 头部 -->
+    <view id="PostTopMoudle">
+        <!-- 头左 -->
+        <view id="PostTopLeftBox">
+            <image id="PostAvater" src="{{item.PubAvater}}" mode=""/>
+            <view id="PostName">{{item.PubNickname}}</view>
+        </view>
+        <!-- 头右 -->
+        <view id="PostRightBox" style="display: {{item.PublicerID===userID?'flex':'none'}};">
+            <!-- 编辑 -->
+            <!-- <view class="ButtonItem" style="border: 2px solid  #f5a490;" bindtap="editWonderFunlAggreement" data-PostID="{{item._id}}" >
+                <view class="ButtonItem_text" style="color: #e45d3b;">编辑</view>
+            </view> -->
+            <!-- 删除 -->
+            <view class="ButtonItem" style="border: 2px solid #a39391;" bindtap="DeletePost" data-PostID="{{item._id}}" >
+                <view class="ButtonItem_text" style="color: #a39391;">删除</view>
+            </view>
+        </view>
+    </view>
+    <!-- 中部 -->
+    <view id="contentBox" bindtap="goDetailPost" data-PostID="{{item._id}}" >
+        <mp-html id="content" content="{{item.wonderContent}}" />
+    </view>
+    <!-- 底部  相关活动 -->
+    <view id="bottomMoudle" bindtap="goDetailActivity" data-ActivityID="{{item.RelationalActivityID}}">
+        <image id="ActivityImage" src="{{item.ActImage}}" mode=""/>
+        <view id="ActivityInfoBox">
+            <view id="Activity_title">{{item.ActName}}</view>
+            <view id="Activity_title_Buttom">
+                <view id="ActivityPrtice" style="color: red;">￥{{item.ActPrtice}}</view>
+                <view id="ActivityPrtice" style="margin-left: 10rpx;">起</view>
+            </view>
+        </view>
+    </view>
+    <view style="height: 20rpx;"></view>
+</view>
+<view style="height: 100rpx;"></view>

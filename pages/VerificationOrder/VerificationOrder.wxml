@@ -1,0 +1,74 @@
+<!--活动信息-->
+<view id="activityMoBox">
+  <view id="activityMoudle">
+    <!--活动照片-->
+    <view id="ActivityImageBox">
+      <image id="showImage" mode="heightFix" src="{{activityInformation.activityImage}}"></image>
+    </view>
+    <!--活动信息-->
+    <view id="activityInformation">
+      <!--主题-->
+      <view id="title">{{activityInformation.activityTheme}}</view>
+      <!--认证信息-->
+      <view id="authenticationModul">
+        <view id="officalText" style="display: {{activityInformation.userInfo[3]?'block':'none'}};">已官方认证</view>
+        <view id="businessModul">
+          <view id="businessText">商家活动</view>
+        </view>
+      </view>
+      <!--标签-->
+      <view id="LabelMoudle">
+        <view class="LabelText" wx:for="{{activityInformation.activityTitle}}">#{{item}}</view>
+      </view>
+      <!--地址-->
+      <view id="addressModule">
+        <view id="addressText">{{activityInformation.activityToTalAddress}}</view>
+      </view>
+    </view>
+  </view>
+  <view id="ddd"></view>
+</view>
+
+
+
+<!--订单信息-->
+<view id="orderInformationMoudle">
+  <!--场次-->
+  <view class="itemBoxs">
+    <view class="itemBox_texts">预定场次</view>
+    <view id="matchesContent">{{orderMatches.ticketTime}}</view>
+  </view>
+  <!--票档-->
+  <view class="itemBox">
+    <view class="itemBox_text">票档</view>
+    <view id="ticketContent">{{orderTickets.ticketName}}-{{orderTickets.ticketPrice}}</view>
+    <view id="ticketNumber">×{{orderInformation.ticketNumber}}</view>
+  </view>
+  <!-- 合计 -->
+  <view class="itemBox">
+    <view class="itemBox_text">总计</view>
+    <view id="totalNumber">￥{{orderInformation.finallPay}}</view>
+  </view>
+  <!--联系人-->
+  <view class="itemBox">
+    <view class="itemBox_text">联系人</view>
+    <view id="caller">{{orderInformation.ContactName}}</view>
+  </view>
+  <!--联系人手机号-->
+  <view class="itemBox">
+    <view class="itemBox_text">联系人电话</view>
+    <view id="phonenumber">{{orderInformation.ContactPhone}}</view>
+  </view>
+</view>
+<!--核销码-->
+<view id="qrcodeBox">
+  <view id="qrcodeText">核销码</view>
+  <!--照片形式-->
+  <view id="qrcodeImageBox" style="display: {{showCanvas==false?'block':'none'}};">
+    <image id="qrcodeImage" src="{{orderInformation.varificationCode}}"></image>
+  </view>
+  <!--动态生成-->
+  <canvas style=" display: {{showCanvas==true?'block':'none'}}; margin: 0 auto;  width: 450rpx; height: 500rpx;" canvas-id="verificationCode" />
+</view>
+
+<view id="dd"></view>

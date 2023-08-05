@@ -1,0 +1,40 @@
+<view>
+  <view>
+    <image id="backgroundImage" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/background.jpg"></image>
+    <!--搜素框-->
+    <view id="serachBox" bindtap="goSearch">
+      <image id="searchIcon" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/search.png"></image>
+      <input id="searchInput" 	disabled="true"  type="text" bindtap="getSearch" placeholder="请输入你想搜索的问题" />
+    </view>
+    <!--功能选择栏-->
+    <view id="functionBox">
+      <!--奶粉溯源-->
+      <view class="functionItem" bindtap="goDriedMilk"  bindtap="goMilk">
+        <image class="functionItemImage" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/millkPowder.png"></image>
+        <view class="functionitemtext">奶粉溯源</view>
+      </view>
+      <!--疫苗表-->
+      <view class="functionItem" bindtap="vaccinetable" bindtap="goVaccine">
+        <image class="functionItemImage" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/vaccineTable.png"></image>
+        <view class="functionitemtext">疫苗表</view>
+      </view>
+      <!--能不能吃-->
+      <view class="functionItem" bindtap="OrEate" bindtap="goEate">
+        <image class="functionItemImage" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/canNotEat.png"></image>
+        <view class="functionitemtext">能不能吃</view>
+      </view>
+    </view>
+  </view>
+  <!--每日推荐-->
+  <view id="everday">
+    <image id="dailyRecommendation" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/text4.png"></image>
+  </view>
+
+  <!--每日推荐内容-->
+  <view id="everdayContentBox" bindtap="ArticleXQ" data-id="{{recommendArticle._id}}">
+    <view id="everdayTitle">{{recommendArticle.articleTitle}}</view>
+    <view id="everdayBriefly"> <text decode="{{true}}">&nbsp;&nbsp;</text>{{recommendArticle.articleBrief}}</view>
+    <image id="everdayImage" src="{{recommendArticle.articleImage}}"></image>
+  </view>
+  <view id="dd"></view>
+</view>

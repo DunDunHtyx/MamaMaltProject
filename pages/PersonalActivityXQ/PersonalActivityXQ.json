@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "mp-html": "/miniprogram_npm/mp-html/index"
+  },
+  "navigationBarTitleText": "个人活动详情页"
+}

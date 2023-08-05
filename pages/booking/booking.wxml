@@ -1,0 +1,51 @@
+<!-- 时间  点时间 跳出票价 点票价可以加票数 -->
+
+<view id="activityBox">
+  <view id="activityTitle">{{activityInfor.activityTheme}}</view>
+  <view id="activityAddress">{{activityInfor.activityToTalAddress}}</view>
+</view>
+<view id="BoxTwo">
+  <!--场次-->
+  <view id="TimeBox">
+    <view id="TimeBox_one">
+      <view id="TimeBox_one_text">场次</view>
+      <view id="TimeBox_one_notice">场次时间均为活动当地时间</view>
+    </view>
+
+    <view id="TimeBox_two">
+      <view class="{{PassId==item._id?'TimeBox_two_modul_point':'TimeBox_two_modul'}}" wx:for="{{TicketInfor}}" bindtap="getTicketTime" data-id="{{item._id}}" wx:key="index">
+        <view class="TimeBox_two_moudulText">{{item.ticketTime}}</view>
+      </view>
+    </view>
+  </view>
+  <!--票档-->
+  <view id="ticket" style="display:{{showTicket?'block':'none'}};">
+    <view id="tickTitle">票档</view>
+    <view id="tickItemBox">
+      <view class="{{pickTickUnder==index?'tickBox':'tickBoxPick'}}" data-i="{{index}}" bindtap="getTicketItem" wx:if="{{item.sellingState==false}}" wx:for="{{pickTicketInfor}}">
+        <!-- 票档 票量充足 -->
+        <view class="tickName" style="display: {{(item.sellingState==false)&&(item.ticketTotalNumber-item.soldNumber)>3?'block':'none'}};">{{item.ticketName+item.ticketPrice}}元</view>
+        <!-- 票档 票量不充足 -->
+        <view id="{{pickTickUnder==index?'showExcessPick':'showExcess'}}" style="display: {{(item.sellingState==false)&&((item.ticketTotalNumber-item.soldNumber)>0&&(item.ticketTotalNumber-item.soldNumber)<=3)?'block':'none'}};">剩余{{item.ticketTotalNumber-item.soldNumber}}张</view>
+        <view id="showLackText" style="display: {{(item.sellingState==false)&&((item.ticketTotalNumber-item.soldNumber)>0&&(item.ticketTotalNumber-item.soldNumber)<=3)?'block':'none'}};">{{item.ticketName+item.ticketPrice}}元</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 步进器 -->
+
+<view id="walkAdd" style="display:{{showStepper?'flex':'none'}};">
+  <view id="walkAdd_one">
+    <view id="One_text">数量</view>
+    <view id="One_notice">每笔订单限购3张</view>
+  </view>
+  <van-stepper id="walkSwiper" max="3" value="{{ 1 }}" bind:change="onChange" />
+</view>
+<!--支付按钮-->
+<view id="payBox">
+  <view id="payNumber">￥{{ticketTotalPrtice}}</view>
+  <view id="YesBox" bindtap="yes">
+    <view id="YexText" bindtap="countPrtice">确定</view>
+  </view>
+</view>

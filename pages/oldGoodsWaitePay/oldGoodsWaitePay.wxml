@@ -1,0 +1,79 @@
+<!-- 待付款页 -->
+<view>
+    <!-- 待付款显示 -->
+    <view class="showAwaitMldule">
+        <!-- 待付款显示 -->
+        <view class="showAwaitText">
+            待付款
+            <van-count-down time="{{ time }}" bind:finish="EndTime" />
+        </view>
+        <!--提示 -->
+        <view class="NoticeBox">
+            请在 <view class="NoticeTime">15分钟</view>内完成订单,过时订单会自动取消
+        </view>
+        <!-- 取消订单&去付款按钮 -->
+        <view class="ButtonModule">
+            <!-- 取消订单按钮 -->
+            <view class="cancleBox" bindtap="DeleatOldGoodOrder">
+                <view class="cancleText">
+                    取消订单
+                </view>
+            </view>
+            <!-- 去付款按钮 -->
+            <view class="goPayBox" bindtap="goPay">
+                <view class="goPayText">
+                    去付款
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 订单详细 -->
+    <view id="orderDetailBox">
+        <!-- 商品信息 -->
+        <view id="GoodInfoBox">
+            <view id="GoodTopBox">
+                <image id="GoodImage" src="{{waitPayInfo.goodImage}}" mode="" />
+                <view id="GoodTopLeftBox">
+                    <view id="GoodInclution">{{waitPayInfo.goodTitle}}</view>
+                    <view id="GoodPrtice">￥{{waitPayInfo.goodPrtice}}</view>
+                </view>
+                <view style="height: 200rpx;"></view>
+            </view>
+            <view id="GoodMiddleBox">
+                <view class="GoodMiddleItemBox">
+                    <view id="GoodTotalText">商品总价</view>
+                    <view id="GoodTotalPrtice">￥{{waitPayInfo.goodPrtice}}</view>
+                </view>
+                <view class="GoodMiddleItemBox">
+                    <view id="GoodFreightText">运费</view>
+                    <view id="GoodFreightPrtice">￥{{waitPayInfo.freight}}</view>
+                </view>
+                <view class="GoodMiddleItemBox">
+                    <view id="FinallPrticeText">应付款</view>
+                    <view id="FinallPrtice">￥{{waitPayInfo.totalPrtice}}</view>
+                </view>
+            </view>
+        </view>
+        <!-- 收货地址 -->
+        <view id="ShippingAddressBox">
+            <view id="ShippingAddressTitle">收货地址</view>
+            <view id="ShippingAddressOne">{{waitPayInfo.ReceiptName+waitPayInfo.ReceiptPhone}} </view>
+            <view id="ShippingAddressTwo">{{waitPayInfo.ReceiptAddress+waitPayInfo.ReceiptDetailAddress}}</view>
+        </view>
+        <!-- 订单信息 -->
+        <view id="GoodOrderBox">
+            <view id="GoodOrderTitle">订单信息</view>
+            <view id="GoodOrderInfo">
+                <view class="GoodOrderItemBox">
+                    <view class="GoodOrderItem_one">卖家昵称:</view>
+                    <view class="GoodOrderItem_two">{{waitPayInfo.userName}}</view>
+                </view>
+                <view class="GoodOrderItemBox">
+                    <view class="GoodOrderItem_one">拍下时间:</view>
+                    <view class="GoodOrderItem_two">{{waitPayInfo.auctionTime}}</view>
+                </view>
+            </view>
+        </view>
+        <view style="height: 100rpx;"></view>
+    </view>
+</view>

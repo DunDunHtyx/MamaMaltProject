@@ -1,0 +1,38 @@
+<view id="box">
+  <!--搜素框-->
+  <view id="searchModul">
+    <view id="searchBox"> 
+        <image id="icon" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/search.png"></image>
+        <input type="text" id="searchInput" bindinput="getinput" placeholder="{{placeHoder}}"/>
+    </view>
+    <view id="cencel" bindtap="goSearchXQ" >搜索</view>
+  </view>
+  <!--历史记录-->
+  <view id="history">
+    <view id="title">
+      <view id="titleText">历史记录</view>
+      <image id="hisIcon" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/trashCan.png" bindtap="removeHistory"></image>
+    </view>
+    <!--历史记录-->
+    <view class="choiceModul">
+      <block wx:for="{{searchHistory}}" wx:key="index" wx:for-item="item" wx:for-index="r" wx:if="{{r<5}}">
+        <view class="choiceItem" bindtap="pointHotItem" data-name="{{item.searchName}}">{{item.searchName}}</view>
+      </block>
+    </view>
+    <view id="ds"></view>
+  </view>
+  <!--热门搜素-->
+  <view id="hotSearch">
+    <!--热门搜素 头部-->
+    <view id="title">
+      <view id="hotText">热门搜素</view>
+    </view>
+    <!--热门搜素-->
+    <view class="choiceModul" >
+      <block wx:for="{{hotSearch}}" >
+        <view class="choiceItem" bindtap="pointHotItem" data-name="{{item.name}}">{{item.name}}</view>
+      </block>
+    </view>
+  </view>
+
+</view>

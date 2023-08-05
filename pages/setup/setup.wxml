@@ -1,0 +1,17 @@
+<!-- 设置 -->
+<view id="ContentBOX">
+    <!-- 隐私政策 -->
+    <view class="ItemBox" bindtap="goPrivacyPolicy">
+        <view class="ItemText">隐私政策</view>
+    </view>
+    <view style="border: 1px solid rgba(128, 128, 128, 0.541);"></view>
+    <!--注销账号  -->
+    <view class="ItemBox" bindtap="goServer">
+        <view class="ItemText">服务协议</view>
+    </view>
+    <view style="border: 1px solid rgba(128, 128, 128, 0.541);"></view>
+    <!--退出账号  -->
+    <view class="ItemBox" bindtap="goSignOut">
+        <view class="ItemText">退出账号</view>
+    </view>
+</view>

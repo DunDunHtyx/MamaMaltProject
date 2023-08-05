@@ -1,0 +1,88 @@
+<view class="top">
+  <view class="top-b">
+    <view class="top-le">闲置品类别</view>
+    <view class="top-rig">
+      <view class='select_box'>
+        <view class='select' catchtap='selectTap'>
+          <text class='select_text'>{{selectData[index]}}</text>
+          <image class='select_img {{selectShow&&"select_img_rotate"}}' src='../image/下拉.png' background-size="contain"></image>
+        </view>
+        <view class='option_box' style='height:{{selectShow?(selectData.length>5?325:selectData.length*50):0}}rpx;'>
+          <text class='option' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 品牌 -->
+  <view class="top-b">
+    <view class="top-le">品牌</view>
+    <view class="top-rig">
+      <input type="text" placeholder="请输入闲置品品牌" />
+    </view>
+  </view>
+  <!-- 成色 -->
+  <view class="top-b">
+    <view class="top-le">成色</view>
+    <view class="top-rig">
+      <view class='select_box'>
+        <view class='select' catchtap='selectTapCS'>
+          <text class='select_text'>{{selectDataCS[indexCS]}}</text>
+          <image class='select_img {{selectShowCS&&"select_img_rotate"}}' src='../image/下拉.png' background-size="contain"></image>
+        </view>
+        <view class='option_box' style='height:{{selectShowCS?(selectDataCS.length>5?325:selectDataCS.length*50):0}}rpx;'>
+          <text class='option' wx:for='{{selectDataCS}}' wx:key='this' data-index='{{index}}' catchtap='optionTapCS'>{{item}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 是否包邮 -->
+  <view class="top-b">
+    <view class="top-le">是否包邮</view>
+    <view class="top-rig">
+      <view class='select_box'>
+        <view class='select' catchtap='selectTapBY'>
+          <text class='select_text'>{{selectDataBY[indexBY]}}</text>
+          <image class='select_img {{selectShowBY&&"select_img_rotate"}}' src='../image/下拉.png' background-size="contain"></image>
+        </view>
+        <view class='option_box' style='height:{{selectShowBY?(selectDataBY.length>5?325:selectDataBY.length*50):0}}rpx;'>
+          <text class='option' wx:for='{{selectDataBY}}' wx:key='this' data-index='{{index}}' catchtap='optionTapBY'>{{item}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--运费 -->
+  <view class="top-b">
+    <view class="top-le">运费</view>
+    <view class="top-rig">
+      <view style=" font-size: 30rpx;margin-top: 30rpx;">
+        <text style="color: red;">￥</text><text>10</text>
+      </view>
+
+    </view>
+  </view>
+</view>
+
+
+<!-- 上传图片 -->
+<view class="middle">
+  <view>
+    <textarea name="" id="" cols="30" rows="10" placeholder="写一些关于商品的品牌型号，入手渠道，转手原因。"></textarea>
+
+    <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" deletable="{{ true }}"  />
+  </view>
+</view>
+
+<view class="price">
+  <image src="../image/充值.png"></image>
+  <view class="price-a">价格</view>
+  <view class="price-b">
+    ￥
+    <view>
+    <input type="number" placeholder="0.00" class="price-input" placeholder-style="color:red;"/>
+  </view>
+  </view>
+</view>
+
+<view>
+  <button class="button" style="width: 300rpx;height: 70rpx;">发布</button>
+</view>

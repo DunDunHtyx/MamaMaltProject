@@ -1,0 +1,88 @@
+<view>
+  <!--模块一-->
+  <view id="module_one">
+    <!--活动简述-->
+    <editor style="display:none;" id="editor" bindblur="getContent" class="ql-container" placeholder="活动简述" bindready="onEditorReady"></editor>
+    <textarea id="Briefly" placeholder="活动简述" bindblur="getContent" value="{{BrieflyText}}"></textarea>
+
+    <!--活动照片-->
+    <view class="cu-bar bg-white " style="margin-top:-20rpx;">
+      <view class="action" style="font-size: 32rpx; ">
+        活动照片上传
+      </view>
+      <view class="action">
+        {{imgList.length}}/1
+      </view>
+    </view>
+    <view class="cu-form-group">
+      <view class="grid col-4 grid-square flex-sub">
+        <view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+          <image src='{{imgList[index]}}' mode='aspectFill'></image>
+          <view class="cu-tag bg-red" catchtap="DelImg"  data-ImageUrl="{{imgList[index]}}" data-index="{{index}}">
+            <text class="cuIcon-close"></text>
+          </view>
+        </view>
+        <view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<1}}">
+          <text class="cuIcon-cameraadd"></text>
+        </view>
+      </view>
+    </view>
+    
+    <view id="dd"></view>
+  </view>
+
+  <view id="module_two_text">详细内容</view>
+
+  <view id="module_two">
+
+
+    <!--参加时间 -->
+    <view id="ActivityTimeBox">
+      <view class="Module_two_text">活动时间</view>
+      <picker id="TimeBox" mode="date" bindchange="getActivityTime">{{ActivityTime}}</picker>
+    </view>
+
+    <!--参加地点-->
+    <view id="addressBox">
+      <view class="Module_two_text">活动地址</view>
+      <picker id="addresPick" mode="region" bindchange="getAddress">{{Address}}</picker>
+    </view>
+
+    <!--详细地址-->
+    <view id="DetailAddressBox">
+      <view class="Module_two_text">活动详细地址</view>
+      <textarea id="DetailAddress_input" bindinput="getDetailAddress" placeholder="请输入活动详细地址" value="{{DeatailAddress}}" type="textarea" />
+    </view>
+    <!--活动标签-->
+    <view id="Label">
+      <view class="Module_two_text">活动标签</view>
+      <picker id="LabelPic" mode="selector" range="{{Label}}" bindchange="getLabel">{{ActivtiyLable}}</picker>
+    </view>
+    <!-- 活动状态 -->
+    <view id="Label" style="display: {{orShowState==true?'flex':'none'}};">
+      <view class="Module_two_text">活动状态</view>
+      <picker id="LabelPic" mode="selector" range="{{actState}}" bindchange="getActState">{{showActState}}</picker>
+    </view>
+    <!--活动要求-->
+    <view>
+      <view id="Module_two_texts">活动要求/详情</view>
+      <editor id="editor" bindblur="getDetailActivity" id="ql-containers" placeholder="活动详细" bindready="onEditorReady"></editor>
+    </view>
+  </view>
+  <!--按钮-->
+  <view id="buttonBoxs">
+    <!-- 删除按钮 -->
+    <view bindtap="bindtapDeleateActa" class="publishBoxss" style="display: {{orShowState==true?'block':'none'}};  background-color: #e41749;">
+      <view id="publisjText">删除</view>
+    </view>
+    <!-- 发布按钮 -->
+    <view id="publishBox" style="display: {{orShowState==true?'none':'block'}};">
+      <view id="publisjText" bindtap="publish">发布</view>
+    </view>
+    <!-- 修改按钮 -->
+    <view bindtap="finallUpdateAct" class="publishBoxss" style="display: {{orShowState==true?'block':'none'}}; background-color: #E99D42;">
+      <view id="publisjText">修改</view>
+    </view>
+  </view>
+  <view id="ddd"></view>
+</view>

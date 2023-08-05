@@ -1,0 +1,50 @@
+<view>
+  <image id="backImage" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/Contentbackground .jpg"></image>
+  <!--头部 疫苗信息-->
+  <view id="topModule">
+    <view id="vaccine_name">{{vaccine.vaccineName}}</view>
+    <view id="vaccineBox">
+      <view id="vaccine_Free" style="display: {{vaccine.ownExpense?'none':''}};">免费</view>
+      <view id="vaccine_own" style="display: {{vaccine.ownExpense?'':'none'}};">自费</view>
+      <view id="vaccine_Money" style="display: {{vaccine.ownExpense?'':'none'}};">￥300</view>
+      <view id="number">第{{vaccine.nowNeedleNumber}}针/{{vaccine.needleNumber}}针</view>
+    </view>
+    <view id="preventDisease">{{vaccine.preventDisease}}</view>
+  </view>
+  <!--底部 简介 费用 预防疾病 接种对象 注意事项-->
+  <view id="bottomModul">
+    <!--疫苗简介-->
+    <view id="vaccineProfile">
+      <view id="profile">疫苗简介</view>
+      <view id="profileContent">{{vaccine.vaccineIntroduce}}</view>
+      <view id="dd"></view>
+    </view>
+    <!--费用-->
+    <view id="FreeBox">
+      <view id="money">费用</view>
+      <view id="moneyContent" style="display: {{vaccine.ownExpense?'none':''}};">免费</view>
+      <view id="moneyContent" style="display: {{vaccine.ownExpense?'':'none'}};">￥{{vaccine.cost}}</view>
+      <view id="dd"></view>
+    </view>
+    <!--预防疾病-->
+    <view id="preventDiseaseModule">
+      <view id="DiseaseText">预防疾病</view>
+      <view id="DiseaseContent">{{vaccine.preventDisease}}</view>
+      <view id="dd"></view>
+    </view>
+    <!--接种对象和次数-->
+    <view id="objectModule">
+      <view id="preventDiseaseText">接种对象和次数</view>
+      <view id="preventDiseaseContent">{{vaccine.InoculatedObject}}</view>
+      <view id="dd"></view>
+    </view>
+    <!--注意事项-->
+    <view id="notice">
+      <view id="noticeText">注意事项</view>
+      <view id="noticeContent">
+        <mp-html  content="{{vaccine.Precaution}}" />
+      </view>
+    </view>
+    <view id="dddd"></view>
+  </view>
+</view>

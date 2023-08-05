@@ -1,0 +1,91 @@
+<!-- 头部用户信息栏 -->
+<view id="topUserInfoModule">
+  <image id="userAvater" src="{{oldGoodSInfo.userImage}}" />
+  <view id="topUserInfo_left">
+    <view id="userNickname">{{oldGoodSInfo.userName}}</view>
+    <view id="userComform">发布于{{oldGoodSInfo.userAdress}}</view>
+  </view>
+</view>
+<!-- 中上 价格栏 -->
+<view id="middleTopModule">
+  <view id="goodPrtice">￥{{oldGoodSInfo.goodPrtice}}</view>
+  <view class="orTransportBox" style="display: {{oldGoodSInfo.IsTransport==true?'block':'none'}};">
+    <view class="transportText">包邮</view>
+  </view>
+  <view class="orTransportBox" style="display: {{oldGoodSInfo.IsTransport==false?'block':'none'}};">
+    <view class="transportText">不包邮</view>
+  </view>
+</view>
+<view id="goodQuality">
+  <view id="goodQualityText">
+    {{showQuality[oldGoodSInfo.quality]}}
+  </view>
+  <view id="showColor"></view>
+</view>
+<!-- 商品题目 -->
+<view id="goodsTitleBox">
+  <view id="goodsTitle">{{oldGoodSInfo.goodTitle}}</view>
+</view>
+<!-- 商品内容栏 -->
+<view id="goodIntroduction">
+  <mp-html content="{{oldGoodSInfo.goodDescribe}}" />
+</view>
+<!-- 商品三类信息 -->
+<view id="goodThreeBox">
+  <!-- 品牌 -->
+  <view class="goodItemBoxs">
+    <view class="goodItem_one">品牌</view>
+    <view class="goodItem_twos">{{oldGoodSInfo.brand}}</view>
+  </view>
+  <!-- 成色 -->
+  <view class="goodItemBox">
+    <view class="goodItem_one">成色</view>
+    <view class="goodItem_two">{{showQuality[oldGoodSInfo.quality]}}</view>
+  </view>
+  <!-- 类别 -->
+  <view class="goodItemBox">
+    <view class="goodItem_one">类别</view>
+    <view class="goodItem_two">{{showType[oldGoodSInfo.oldGoodType]}}</view>
+  </view>
+</view>
+<!-- 照片 -->
+<view id="imageBOx">
+  <image id="leftImage" wx:for="{{oldGoodSInfo.showImage}}" wx:key="index" src="{{item}}" mode="widthFix" />
+</view>
+
+<view style="height: 300rpx;"></view>
+
+<!-- 买家底部栏 -->
+<view id="buttonModule"  style="display:{{GoPageType==1?'flex':'none'}} ;" >
+  <!-- 第一部分 -->
+  <view id="oneBox">
+    <!-- 联系商家 -->
+    <view class="oneItem" bindtap="CallBusiness">
+      <image class="oneItem_icon" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/message.png" />
+      <view class="oneItem_text">商家</view>
+    </view>
+    <!-- 收藏商品 -->
+    <view class="oneItem">
+      <image class="oneItem_icon" bindtap="goShoucang" src="{{orShoucang?'cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/aleadyCollection.png':'cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/collection.png'}}" ></image>
+      <view class="oneItem_text">收藏</view>
+    </view>
+  </view>
+  <!-- 第二部分 -->
+  <view id="twoBox" bindtap="WantBuy">
+    <view id="twoItem_text">我想要</view>
+  </view>
+</view>
+
+<!-- 商家底部栏 -->
+<view id="buttonModule"  style="display:{{GoPageType==2?'flex':'none'}} ;">
+    <view id="ButtonBox">
+      <!-- 编辑 -->
+      <view class="ButtonItem" style="border: 2px solid #e28605;" bindtap="editGoodInfo" >
+        <view class="ButtonItemText" style="color: #e28605;">编辑</view>
+      </view>
+      <!-- 下架 -->
+      <view class="ButtonItem" style="border: 2px solid #8f9435;" bindtap="TakedownGood">
+        <view class="ButtonItemText" style="color:#8f9435 ">下架</view>
+      </view>
+    </view>
+</view>

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "mp-html": "/miniprogram_npm/mp-html/index"
+  },
+  "navigationBarTitleText": "记录美好瞬间",
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#f6f6f6"
+}

@@ -1,0 +1,24 @@
+   <!--搜素框-->
+   <view id="searchModul">
+    <view id="searchBox"> 
+        <image id="icon" src="/image/search.png"></image>
+        <input type="text" id="searchInput" bindinput="getinput" placeholder="{{placeHoder}}"/>
+    </view>
+    <view id="cencel" bindtap="goSearchXQ">搜素</view>
+  </view>
+  <!--头部-->
+  <view id="title">
+    <image id="titleImage" src="/image/text7.png"></image>
+  </view>
+  <!--内容篇-->
+  <view class="article" wx:for="{{article}}" bindtap="goArticleXQ" data-_id="{{item._id}}">
+    <view class="article_title" >{{item.articleTitle}}</view>
+    <view class="article_one">
+      <view class="article_content">{{item.articleBrief}}</view>
+      <image class="article_image" mode="heightFix" src="{{item.articleImage}}"></image>
+    </view>
+    <view class="article_from">摘自于:{{item.excerptFrom}}</view>
+    <view id="dd"></view>
+  </view>
+
+  <view id="ddd"></view>

@@ -1,0 +1,10 @@
+<!-- 麦芽妈妈隐私协议 -->
+<view id="title">
+    麦芽妈妈隐私协议
+</view>
+<!-- 隐私协议 -->
+<view id="contentBox"  >
+    <mp-html  content="{{serverContet}}" />
+</view>
+<view style="height: 50rpx;"></view>
+

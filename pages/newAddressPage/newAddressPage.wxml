@@ -1,0 +1,30 @@
+<!-- 新增收货地址 -->
+<view id="fromBox">
+    <!-- 收货人 -->
+    <view class="oneItemBox">
+        <view class="oneItem_name">收货人</view>
+        <input class="oneItem_input" type="text" bindinput="getReceiptPeople" value="{{updateReceiptInfo.ReceiptName}}" placeholder="收货人"/>
+    </view>
+    <!-- 手机号 -->
+    <view class="oneItemBox">
+        <view class="oneItem_name">手机号</view>
+        <input class="oneItem_input" type="text" bindinput="getReceiptPhone" value="{{updateReceiptInfo.ReceiptPhone}}" placeholder="手机号"/>
+    </view>
+    <!-- 地区 -->
+    <view class="oneItemBox">
+        <view class="oneItem_name">地区</view>
+        <picker id="pickerName" mode="region" bindchange="getPicker"   >
+            {{showChoiceAddress}}
+        </picker>
+    </view>
+    <!-- 详细地址 -->
+    <view id="detailBOx">
+        <view class="oneItem_name">详细地址</view>
+        <textarea id="detailAddressInput" bindinput="getReceiptAddress" value="{{updateReceiptInfo.ReceiptDetailAddress}}" placeholder="如街道、门牌号、小区、乡镇、村等"/>
+    </view>
+</view>
+<!-- 新增地址按钮 -->
+<view id="newAddAddressButton" bindtap="addAddress">
+    <view id="newAddAddText" style="display: {{orUpdate==false?'block':'none'}};">添加地址</view>
+    <view id="newAddAddText" style="display: {{orUpdate==true?'block':'none'}};" >修改地址</view>
+</view>

@@ -1,0 +1,58 @@
+<!-- 发布精彩瞬间 页 -->
+<view>
+<!-- 选择 关联项目活动 -->
+    <view class="choiceAct">
+      <view class="choiceText">关联活动</view>
+      <view class="choiceBox" bindtap="choiceActivity">
+          <view class="choice_one" style="display:{{orSelected==true?'none':'block'}};">
+            <view class="choiceOne_text">请选择要关联的商家活动</view>
+          </view>
+           <!-- 选中关联活动后 活动内容展示 -->
+          <view class="selectedActBoxs" style="display: {{orSelected==true?'flex':'none'}};">
+            <image class="selectedActImage" src="{{realationActInfo.activityImage}}"></image>
+            <view class="selectedActInfo">
+              <view class="selectedActInfo_one">{{realationActInfo.activityTheme}}</view>
+              <view class="selectedActInfo_two">{{realationActInfo.activityDate}}-{{realationActInfo.activityEndTime}}</view>
+              <view class="selectedActInfo_three">{{realationActInfo.activityToTalAddress}}</view>
+            </view>
+          </view>
+          <view class="choice_two">
+            <image class="choiceTwo_icon" src="/image/right.png"></image>
+          </view>
+      </view>
+    </view>
+<!-- 添加照片+内容 -->
+<!--模块一-->
+<view id="module_one">
+    <!--活动简述-->
+    <editor  id="editor" bindblur="getContent" class="ql-container" placeholder="记录你的精彩瞬间吧!" bindready="onEditorReady"></editor>
+    <!--活动照片-->
+    <view class="cu-bar bg-white " style="margin-top:-80rpx;">
+      <view class="action" style="font-size: 32rpx; ">
+        活动照片上传
+      </view>
+      <view class="action">
+        {{imgList.length}}/5
+      </view>
+    </view>
+    <view class="cu-form-group">
+      <view class="grid col-4 grid-square flex-sub">
+        <view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+          <image src='{{imgList[index]}}' mode='aspectFill'></image>
+          <view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+            <text class="cuIcon-close"></text>
+          </view>
+        </view>
+        <view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<5}}">
+          <text class="cuIcon-cameraadd"></text>
+        </view>
+      </view>
+    </view>
+    <view id="dd"></view>
+  </view>
+
+  <!-- 发布按钮 -->
+  <view class="finshButton" bindtap="publish">
+    <view class="button_text">发布</view>
+  </view>
+</view>

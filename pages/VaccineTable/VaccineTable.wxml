@@ -1,0 +1,30 @@
+<!--疫苗表-->
+  <!--疫苗接种日期-->
+  <view class="inoculationVaccine"  wx:for="{{vaccinationTime}}" wx:for-item="item" wx:for-index="i">
+    <!--疫苗接种时间段-->
+    <view class="inoculationTime">
+      <view class="timeText">{{item}}</view>
+    </view>
+    <!--接种疫苗名称-->
+    <view class="vaccineBox" wx:for="{{Vaccine}}"  wx:if="{{item.vaccineTime==i}}" bindtap="goVaccineXQ" data-id="{{item._id}}">
+      <!--第一行-->
+      <view class="vaccine_one">
+        <view class="vaccine_name">{{item.vaccineName}}</view>
+      </view>
+      <!--第二行-->
+      <view class="vacccine_two">
+        <view class="vaccine_must" style="display: {{item.mustPlay?'':'none'}};">免费</view>
+        <view class="vaccine_must" style="display: {{item.mustPlay?'none':''}};">自费</view>
+        <view class="vaccine_neddle">第{{item.nowNeedleNumber}}/{{item.needleNumber}}针</view>
+        <view class="vacccine_moeny"  style="display: {{item.ownExpense?'':'none'}};">￥{{item.cost}}</view>
+      </view>
+      <!--第三行-->
+      <view class="vaccine_three">
+        <view class="vaccine_content">{{item.preventDisease}}</view>
+      </view>
+      <view id="dd"></view>
+    </view>
+    <view id="ddd"></view>
+  </view>
+
+<view id="dddd"></view>

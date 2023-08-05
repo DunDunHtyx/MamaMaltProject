@@ -1,0 +1,217 @@
+@font-face {
+    font-family: AlibabaPuHuiTi-2-55-Regular;
+    src:url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.eot) format('embedded-opentype'),
+  url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.otf) format('opentype'),
+  url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.ttf) format('TrueType'),
+  url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.woff) format('woff'),
+  url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.woff2) format('woff2');
+  }
+  
+@font-face {
+	font-family: AlibabaPuHuiTi-2-45-Light;
+	src:url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.eot) format('embedded-opentype'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.otf) format('opentype'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.ttf) format('TrueType'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.woff) format('woff'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.woff2) format('woff2');
+}
+
+
+page{
+  width: 100%;
+  height: 100%;
+}
+#backImage{
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+}
+#topModule{
+    width: 75%;
+    position: relative;
+    top: 30rpx;
+    margin-left: 40rpx;
+}
+
+#vaccine_name{
+    font-size: 49rpx;
+    letter-spacing: 12rpx;
+    font-weight: 800;
+    font-family:AlibabaPuHuiTi-2-45-Light;
+
+  }
+  #vaccineBox{
+    display: flex;
+    /* border: 1px solid red; */
+    height: 60rpx;
+  }
+#vaccine_Free{
+    width: 120rpx;
+    height: 40rpx;
+    text-align: center;
+    font-size: 33rpx;
+    letter-spacing: 6rpx;
+    border: 1px solid red;
+    font-family: AlibabaPuHuiTi-2-45-Light;
+    color: red;
+    font-weight: 500;
+    border-radius: 8rpx;
+    margin-top: 14rpx;
+    margin-left: 30rpx;
+    padding-left: 13rpx;
+    padding-right: 5rpx;
+    padding-bottom: 4rpx;
+    line-height: 38rpx;
+}
+#vaccine_own{
+  font-family: AlibabaPuHuiTi-2-45-Light;
+    letter-spacing: 5rpx;
+    border: 1px solid red;
+    height: 30rpx;
+    color: red;
+    font-weight: 500;
+    border-radius: 8rpx;
+    margin-top: 14rpx;
+    margin-left: 20rpx;
+    padding-left: 13rpx;
+    padding-right: 5rpx;
+    padding-bottom: 4rpx;
+    line-height: 38rpx;
+}
+#vaccine_Money{
+  font-size: 28rpx;
+  letter-spacing: 5rpx;
+  border: 1px solid red;
+  height: 30rpx;
+  color: red;
+  font-weight: 500;
+  border-radius: 8rpx;
+  margin-top: 14rpx;
+  margin-left: 20rpx;
+  padding-left: 13rpx;
+  padding-right: 5rpx;
+  padding-bottom: 4rpx;
+  line-height: 38rpx;
+}
+#number{
+    font-size: 33rpx;
+    margin-left: 40rpx;
+    margin-top: 10rpx;
+    font-weight: 500;
+    letter-spacing: 8rpx;
+}
+#preventDisease{
+    width: 100%;
+    font-size: 33rpx;
+    font-family:AlibabaPuHuiTi-2-45-Light ;
+    letter-spacing: 8rpx;
+    margin-left: 25rpx;
+    margin-top: 18rpx;
+}
+#bottomModul{
+  margin-top: 70rpx;
+  border-top: 1px solid gray;
+  border-radius:50rpx 50rpx 0 0 ;
+  background-color: white;
+  position: relative;
+}
+#vaccineProfile{
+    width: 92%;
+    margin: 0 auto;
+    margin-top: 40rpx;
+    border-bottom: 1px solid gray;
+}
+#profile{
+    font-size: 40rpx;
+    font-family: AlibabaPuHuiTi-2-55-Regular;
+    letter-spacing: 8rpx;
+}
+#profileContent{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20rpx;
+    font-family:AlibabaPuHuiTi-2-45-Light ;
+    letter-spacing: 2rpx;
+    font-size: 33rpx;
+}
+#FreeBox{
+    width: 92%;
+    margin: 0 auto;
+    margin-top: 20rpx;
+    border-bottom: 1px solid gray;
+}
+#money{
+  font-family: AlibabaPuHuiTi-2-55-Regular;
+  font-size: 40rpx;
+  letter-spacing: 8rpx;
+}
+#moneyContent{
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10rpx;
+  font-family:AlibabaPuHuiTi-2-45-Light ;
+  letter-spacing:8rpx;
+  font-size: 35rpx;
+}
+#preventDiseaseModule{
+  width: 92%;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  border-bottom: 1px solid gray;
+}
+#DiseaseText{
+  font-family: AlibabaPuHuiTi-2-55-Regular;
+  font-size: 40rpx;
+  letter-spacing: 8rpx;
+}
+#DiseaseContent{
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10rpx;
+  font-family:AlibabaPuHuiTi-2-45-Light ;
+  letter-spacing:6rpx;
+  font-size: 35rpx;
+}
+#objectModule{
+  width: 92%;
+  margin: 0 auto;
+  margin-top: 18rpx;
+  border-bottom: 1px solid gray;
+}
+#preventDiseaseText{
+  font-family: AlibabaPuHuiTi-2-55-Regular;
+  font-size: 40rpx;
+  letter-spacing: 8rpx;
+}
+#preventDiseaseContent{
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10rpx;
+  font-family:AlibabaPuHuiTi-2-45-Light ;
+  letter-spacing:4rpx;
+  font-size: 33rpx;
+}
+#notice{
+  width: 92%;
+  margin: 0 auto;
+  margin-top: 18rpx;
+}
+#noticeText{
+  font-family: AlibabaPuHuiTi-2-55-Regular;
+  font-size: 40rpx;
+  letter-spacing: 8rpx;
+}
+#noticeContent{
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10rpx;
+  font-family:AlibabaPuHuiTi-2-45-Light ;
+  letter-spacing:4rpx;
+  font-size: 33rpx;
+}
+#dd{
+  height: 20rpx;
+}
+#dddd{
+  height: 100rpx;
+}

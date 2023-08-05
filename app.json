@@ -1,0 +1,88 @@
+{
+  "pages": [
+    "pages/guide/guide",
+    "pages/AddTrackingNumber/AddTrackingNumber",
+    "pages/addOldGood/addOldGood",
+    "pages/oldGoodSuccess/oldGoodSuccess",
+    "pages/BuyAndSell/BuyAndSell",
+    "pages/oldGoodsWaitePay/oldGoodsWaitePay",
+    "pages/setup/setup",
+    "pages/newAddressPage/newAddressPage",
+    "pages/OldGoodsPay/OldGoodsPay",
+    "pages/NoticePage/NoticePage",
+    "pages/PostPage/PostPage",
+    "pages/PersonInforPage/PersonInforPage",
+    "pages/AddressManagePage/AddressManagePage",
+    "pages/WaitPay/WaitPay",
+    "pages/underActive/underActive",
+    "pages/choiceActivity/choiceActivity",
+    "pages/userRoom/userRoom",
+    "pages/PublishWonder/PublishWonder",
+    "pages/WonderXQ/WonderXQ",
+    "pages/RealNameAccredited/RealNameAccredited",
+    "pages/PublishActivity/PublishActivity",
+    "pages/Login/Login",
+    "pages/WonderfulMoments/WonderfulMoments",
+    "pages/richText/richText",
+    "pages/Search/Search",
+    "pages/serviceAgreement/serviceAgreement",
+    "pages/privacyAgreement/privacyAgreement",
+    "pages/VerificationOrder/VerificationOrder",
+    "pages/PaySucceed/PaySucceed",
+    "pages/booking/booking",
+    "pages/OfficialActivityXQ/OfficialActivityXQ",
+    "pages/AddActivity/AddActivity",
+    "pages/PersonalActivityXQ/PersonalActivityXQ",
+    "pages/ArticleXQ/ArticleXQ",
+    "pages/SearchXQ/SearchXQ",
+    "pages/OrEatXQ/OrEatXQ",
+    "pages/OrEat/OrEat",
+    "pages/VaccineTableXQ/VaccineTableXQ",
+    "pages/VaccineTable/VaccineTable",
+    "pages/ReplacementOld/ReplacementOld",
+    "pages/DatingOffline/DatingOffline",
+    "pages/Home/Home",
+    "pages/Mine/Mine",
+    "pages/VerificationBusiness/VerificationBusiness",
+    "pages/OldObjectDetail/OldObjectDetail",
+    "pages/PayOld/PayOld",
+    "pages/idlePublish/idlePublish"
+    ],
+    "window": {
+      "backgroundTextStyle": "light",
+      "navigationBarBackgroundColor": "#fff",
+      "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+      "color": "#bdc3c7",
+      "selectedColor": "#3498bd",
+      "backgroundColor": "#fff",
+      "list":[
+        {
+          "pagePath":"pages/Home/Home",
+          "iconPath": "/image/Home.png",
+          "selectedIconPath": "/image/clickHome.png",
+          "text": "首页"
+        },
+        {
+          "pagePath": "pages/DatingOffline/DatingOffline",
+          "iconPath": "/image/banner.png",
+          "selectedIconPath": "/image/clickBanner.png",
+          "text": "约线下"
+        },
+        {
+          "pagePath": "pages/ReplacementOld/ReplacementOld",
+          "iconPath": "/image/oldReplace.png",
+          "selectedIconPath": "/image/clickStore.png",
+          "text": "旧物置换"
+        },
+        {
+          "pagePath": "pages/Mine/Mine",
+          "iconPath": "/image/mine.png",
+          "selectedIconPath": "/image/clickMine.png",
+          "text": "我的"
+        }
+      ]
+    },
+    "sitemapLocation": "sitemap.json"
+}

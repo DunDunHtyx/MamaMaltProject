@@ -1,0 +1,80 @@
+<view>
+  <!--活动信息模块-->
+  <view id="activityInfoBox">
+    <!--活动信息-->
+    <view id="infoBox_one">
+      <view id="info_title">{{bookActivityInfo.activityTheme}}</view>
+      <view id="info_address">{{bookActivityInfo.activityToTalAddress}}</view>
+    </view>
+    <!--订单信息-->
+    <view id="orderBox">
+      <view id="order_matches">{{matches.ticketTime}}</view>
+      <view id="order_ticket">{{ticketInfo.ticketName+ticketInfo.ticketPrice}}票档×{{bookInformation.ticketNumber}}张</view>
+    </view>
+  </view>
+  <!--订单信息模块-->
+  <view id="orderIngoBox">
+    <!--服务-->
+    <view id="service">
+      <view id="serviceText">服务</view>
+      <view id="serviceBox_one">
+        <image id="serviceIcon" src="cloud://cloudeone-8g7tsimf3400c427.636c-cloudeone-8g7tsimf3400c427-1314722369/image/no.png"></image>
+        <view id="serviceBoxone_text">不支持退票</view>
+      </view>
+    </view>
+    <!--配送方式-->
+    <view id="distribution">
+      <view id="DistributionText">配送方式</view>
+      <view id="DistributionTicket">
+        <view id="DistributionTicketText">电子票</view>
+        <view id="DistributionTicket_one">
+          <view id="DistributionTicket_oneText">直接入场</view>
+        </view>
+      </view>
+      <view id="distributionNotice">支付成功后,无需取票,前往订单查看入场凭证</view>
+      <view id="ddd"></view>
+    </view>
+    <!--联系人-->
+    <view id="callBox">
+      <view id="CallName">联系人</view>
+      <input id="CallNameInput" type="text" bindinput="getCallName" placeholder="请填写联系人姓名" />
+      <view id="CallPhoneBox">
+        <view id="CallPhone">手机号</view>
+        <input id="phoneNumber" placeholder="请输入联系人手机号" bindinput="getCallPhone" type="number" />
+      </view>
+      <view id="dddd"></view>
+    </view>
+    <!--提醒-->
+    <view id="warmNotice">
+      <view id="warmNoticetext"> 由于商品为有价证券,非普通商品,其背后承载的文化服务具有时效性，稀缺性等特征，一旦订购成功，不支持退换。</view>
+    </view>
+    <!--提交订单-->
+    <view id="payBox">
+      <view id="prticeBox">
+        <view id="prticeNumber">￥{{bookInformation.ticketTotalPrtice}}</view>
+      </view>
+      <view id="payButtone" bindtap="SubmitOrder">
+        <view id="payButtonText">提交订单</view>
+      </view>
+    </view>
+  </view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</view>

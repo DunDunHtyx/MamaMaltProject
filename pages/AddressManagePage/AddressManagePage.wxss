@@ -1,0 +1,126 @@
+@font-face {
+    font-family: AlibabaPuHuiTi-2-45-Light;
+    src: url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.eot) format('embedded-opentype'),
+        url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.otf) format('opentype'),
+        url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.ttf) format('TrueType'),
+        url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.woff) format('woff'),
+        url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.woff2) format('woff2');
+}
+
+
+@font-face {
+    font-family: AlibabaPuHuiTi-2-55-Regular;
+    src: url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.eot) format('embedded-opentype'),
+        url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.otf) format('opentype'),
+        url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.ttf) format('TrueType'),
+        url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.woff) format('woff'),
+        url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-55-Regular/AlibabaPuHuiTi-2-55-Regular.woff2) format('woff2');
+}
+
+
+@font-face {
+    font-family: AlibabaPuHuiTi-2-65-Medium;
+    src: url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-65-Medium/AlibabaPuHuiTi-2-65-Medium.eot) format('embedded-opentype'),
+        url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-65-Medium/AlibabaPuHuiTi-2-65-Medium.otf) format('opentype'),
+        url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-65-Medium/AlibabaPuHuiTi-2-65-Medium.ttf) format('TrueType'),
+        url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-65-Medium/AlibabaPuHuiTi-2-65-Medium.woff) format('woff'),
+        url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-65-Medium/AlibabaPuHuiTi-2-65-Medium.woff2) format('woff2');
+}
+
+
+
+
+
+
+
+/* 地址各项 */
+#addressItem {
+    /* border: 1px solid red; */
+    padding: 30rpx 30rpx 25rpx 30rpx;
+    border-bottom: 1px solid gray;
+}
+
+#addressUserInfoBOx {
+    display: flex;
+    /* border: 1px solid red; */
+    margin-top: 20rpx;
+}
+
+#addressNickname {
+    font-size: 38rpx;
+    letter-spacing: 8rpx;
+    font-family: AlibabaPuHuiTi-2-55-Regular;
+}
+
+#addressPhone {
+    font-size: 33rpx;
+    letter-spacing: 4rpx;
+    margin-top: 10rpx;
+    margin-left: 20rpx;
+    font-family: AlibabaPuHuiTi-2-45-Light;
+}
+
+#DetailAddress {
+    /* border: 1px solid red; */
+    padding: 15rpx 0rpx 10rpx 5rpx;
+    font-size: 33rpx;
+    letter-spacing: 4rpx;
+    font-family: AlibabaPuHuiTi-2-45-Light;
+}
+
+#buttomBox {
+    display: flex;
+    margin-top: 10rpx;
+    /* border: 1px solid red; */
+    justify-content: space-between;
+}
+
+#defaultBox {
+    margin-top: 5rpx;
+}
+
+#defaultText {
+    font-family: AlibabaPuHuiTi-2-45-Light;
+    font-size: 33rpx;
+    letter-spacing: 4rpx;
+}
+
+#manageAddressModule {
+    display: flex;
+}
+
+.manageButton {
+    width: 120rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    margin-left: 30rpx;
+    border-radius: 10rpx;
+    text-align: center;
+    border: 1px solid gray;
+}
+
+.manageText {
+    font-family: AlibabaPuHuiTi-2-45-Light;
+    font-size: 33rpx;
+    letter-spacing: 4rpx;
+}
+
+/* 新增地址 */
+#addAddress {
+    width: 70%;
+    height: 90rpx;
+    line-height: 90rpx;
+    margin: 0 auto;
+    margin-top: 100rpx;
+    border-radius: 10rpx;
+    /* border: 1px solid red; */
+    background-color: #ffbf6b;
+}
+
+#addAddressText {
+    color: white;
+    text-align: center;
+    font-size: 43rpx;
+    letter-spacing: 8rpx;
+    font-family: AlibabaPuHuiTi-2-45-Light;
+}

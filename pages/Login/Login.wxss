@@ -1,0 +1,79 @@
+
+@font-face {
+	font-family: AlibabaPuHuiTi-2-45-Light;
+	src:url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.eot) format('embedded-opentype'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.otf) format('opentype'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.ttf) format('TrueType'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.woff) format('woff'),
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-2/AlibabaPuHuiTi-2-45-Light/AlibabaPuHuiTi-2-45-Light.woff2) format('woff2');
+}
+
+
+
+#background{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -999;
+  background-size: 100% 100%;
+}
+
+#Logo{
+  width: 550rpx;
+  height: 220rpx;
+  margin-top: 210rpx;
+  margin-left: 100rpx;
+}
+
+#loginButton{
+  width: 85%;
+  height: 90rpx;
+  border-radius: 25rpx;
+  margin-top: 130rpx;
+  line-height: 58rpx;
+  background-color:#FF9617;
+  cursor: pointer;
+}
+#loginButton[disabled] {
+  border: none ;
+  outline: none ;
+  color: gray ;
+  background: #f5f5f5;
+}
+
+#text{
+  font-family: AlibabaPuHuiTi-2-45-Light;
+  font-size:40rpx;
+  color: white;
+  line-height: 85rpx;
+  letter-spacing: 10rpx;
+}
+/* 阅读同意选项 */
+#check{
+  display: flex;
+  width: 96%;
+  margin: 0 auto;
+  margin-top: 50rpx;
+}
+#checkBoxs{
+  background-color: rgba(245, 244, 244, 0.842);
+  width: 38rpx;
+  height: 38rpx;
+  border-radius: 45rpx;
+  border: 1px solid rgb(192, 189, 189);
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+}
+#agreelabel{
+  margin-left: 20rpx;
+  margin-top: 5rpx;
+}
+#agreeBox{
+  font-size:31rpx;
+  font-family: AlibabaPuHuiTi-2-45-Light;
+  letter-spacing: 4rpx;
+}
+.agreeText{
+  color: green;
+  letter-spacing: 4rpx;
+}

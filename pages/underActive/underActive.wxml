@@ -1,0 +1,110 @@
+<!-- 线下活动页 -->
+<view>
+  <!-- 头部栏 -->
+  <view class="organContentModule">
+    <!-- 第一个Tab标签栏 平分 -->
+    <scroll-view id="OneTab" scroll-x class="bg-white nav">
+      <view class="flex text-center">
+        <view class="cu-item flex-sub {{index==TabCur?'text-orange cur  ':''}}" wx:for="{{tabText}}" wx:key="index" bindtap="tabSelect" data-id="{{index}}">
+          {{item}}
+        </view>
+      </view>
+    </scroll-view>
+
+    <!-- 第二个Tab标签栏 -->
+    <scroll-view id="TwoTab" scroll-x class="bg-white nav">
+      <view class="flex text-center" style="display: {{MyOrganiz==false?'flex':'none'}};">
+        <view class="cu-item flex-sub {{index==TabCurTwo?'text-orange ':''}}" wx:for="{{attendTab}}" wx:key bindtap="twotabSelect" data-id="{{index}}">
+          {{item}}
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!-- 内容页 -->
+  <!-- 我组织的 页 -->
+  <view style="display: {{MyOrganiz==true?'block':'none'}};" wx:for="{{showOrganList}}" wx:key="index">
+    <!-- 内容项 -->
+    <view class="organContentBox">
+      <!-- 头部 -->
+      <view class="organTopBox">
+        <view class="organTopBox_one">
+          <view class="organTopTitle" wx:for="{{item.activityTitle}}" wx:if="{{index<2}}" wx:key="index">#{{item}}</view>
+        </view>
+        <view class="organType">
+          <view class="organTypeText" style="display: {{item.activityType==1?'block':'none'}};">商家活动</view>
+          <view class="organTypeText" style="display: {{item.activityType==0?'block':'none'}};">个人组织</view>
+        </view>
+        <image class="UpdateAct" bindtap="updateActInfo" data-Type="{{item.activityType}}" data-_id="{{item._id}}" data-UserID="{{item.userInforID}}" src="/image/revise.png"></image>
+      </view>
+      <!-- 中部 -->
+      <view class="organMiddle" style="display: {{item.activityType==0?'-webkit-box':'none'}};">
+        <!--个人组织-->
+        {{item.activityOverview}}
+      </view>
+      <view class="organMiddle" style="display: {{item.activityType==1?'-webkit-box':'none'}};">
+        {{item.activityTheme}}
+      </view>
+      <!-- 底部 -->
+      <view class="oragnBottomBox">
+        <view class="bottomRight_box">
+          <image class="bottomRight_image" src="{{item.activityImage}}" />
+          <view class="bottomRight_left">
+            <view class="bottomRight_time">{{item.activityDate}}</view>
+            <view class="bottomRight_address">{{item.activityToTalAddress}}</view>
+          </view>
+        </view>
+        <view class="bottomLeft_box" data-_id="{{item._id}}" data-Type="{{item.activityType}}" bindtap="goDetailMyOrgan">
+          <view class="bottomLeft_text">
+            查看详细
+          </view>
+        </view>
+      </view>
+      <view id="xx"></view>
+    </view>
+
+  </view>
+
+
+  <!-- 参加的活动页 -->
+  <view class="TakPartActModule" style="display: {{MyTakepart==true?'block':'none'}};" wx:for="{{showTakPartList}}" wx:key="index">
+  <!-- 内容项 -->
+    <view class="TakPartActBox">
+      <!-- 头部 -->
+      <view class="takePartTop">
+        <view class="JoinActTitle">
+          {{item.activityTheme}}
+        </view>
+        <view class="JoinOrderState" style=" display: {{item.orPayState==0?'block':'none'}}; color: #ff585d; ">未付款</view>
+        <view class="JoinOrderState" style="display: {{item.orPayState==-1?'block':'none'}}; color: #5e412f;">已取消</view>
+        <view class="JoinOrderState" style="display: {{item.orVerification==false&&item.orPayState==1?'block':'none'}}; color: #f67504;" >未核销</view>
+        <view class="JoinOrderState" style="display: {{item.orVerification==true&&item.orPayState==1?'block':'none'}}; color: #a39391;">已完成</view>
+      </view>
+      <!-- 中部 -->
+      <view class="takPartMiddle">
+        <image class="JoinActImage" src="{{item.activityImage}}" />
+        <view class="JoinOrderDetailBOx">
+          <view class="orderItem">场次:{{item.ticketTime}}</view>
+          <view class="orderItem">票档:{{item.ticketType[item.pickTicketUnder].ticketName}} {{item.ticketType[item.pickTicketUnder].ticketPrice}}元</view>
+          <view class="orderItem">数量:{{item.ticketNumber}}张</view>
+          <view class="orderItem">总价:￥{{item.finallPay}}</view>
+        </view>
+      </view>
+      <!-- 底部 选择按钮-->
+      <view class="takPartBottom">
+        <view class="ButtonItem"  style="display: {{item.orPayState==0?'block':'none'}}; border:1px solid  #ff585d;" bindtap="goWaitPay" data-orderId="{{item._id}}">
+          <view class="ButtonItem_text" style="color:#ff585d;">去付款</view>
+        </view>
+        <view class="ButtonItem"  style="display: {{item.orPayState==0?'block':'none'}}; border: 1px solid  #f29c2b;" bindtap="cancleOrder" data-orderId="{{item._id}}">
+          <view class="ButtonItem_text" style="color: #f29c2b;">取消订单</view>
+        </view>
+        <view class="ButtonItem"  style="display: {{item.orPayState==1?'block':'none'}}; border:1px solid  #5e412f;" bindtap="goOrderDetailInfo" data-orderId="{{item._id}}">
+          <view class="ButtonItem_text" style="color: #5e412f;">查看详细</view>
+        </view>
+      </view>
+      <view id="xx"></view>
+    </view>
+  </view>
+
+  <view id="xxx"></view>
+</view>

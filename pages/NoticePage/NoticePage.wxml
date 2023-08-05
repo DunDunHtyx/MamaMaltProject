@@ -1,0 +1,17 @@
+<!-- 通知 -->
+<!-- 通知项 -->
+<view id="NoticeItemBox" wx:for="{{showNoticeList}}" wx:key="index" wx:if="{{item.type==2}}">
+  <!-- 标题 -->
+  <view id="NoticeTitle">
+    {{item.NoticeTitle}}
+  </view>
+  <!-- 内容 -->
+  <view id="NoticeContent">
+    {{item.NoticeContent}}
+  </view>
+  <!-- 时间 -->
+  <view id="NoticeTime">
+   {{item.NoticeTime}}
+  </view>
+  <view style="height: 30rpx;"></view>
+</view>

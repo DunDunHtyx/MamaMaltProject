@@ -1,0 +1,32 @@
+<!--地址管理页 -->
+<!-- 地址个项 -->
+<view id="addressItem" wx:for="{{receiptAddress}}" wx:key="index"  data-ID="{{item._id}}" bindtap="choiceReceiptAddress"> 
+    <view id="addressUserInfoBOx">
+        <view id="addressNickname">{{item.ReceiptName}}</view>
+        <view id="addressPhone">{{item.ReceiptPhone}}</view>
+    </view>
+    <view id="DetailAddress">
+        {{item.ReceiptAddress}}
+        {{item.ReceiptDetailAddress}}
+    </view>
+    <view id="buttomBox">
+        <van-checkbox value='{{showDefaultAddressID==item._id?true:false}}' id="defaultBox" bind:change="onChange" data-ID="{{item._id}}"  >
+            <view id="defaultText" wx:if="{{showDefaultAddressID==item._id}}">已设默认</view>
+            <view id="defaultText" wx:if="{{showDefaultAddressID!=item._id}}">设置为默认</view>
+        </van-checkbox>
+        <view id="manageAddressModule">
+            <view class="manageButton" bindtap="GoUpdateReceipt" data-ID="{{item._id}}" >
+                <view class="manageText">修改</view>
+            </view>
+            <view class="manageButton" bindtap="DeleateReceipt" data-ID="{{item._id}}">
+                <view class="manageText">删除</view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<!-- 新增地址按钮 -->
+<view id="addAddress" bindtap="goNewAddressPage">
+    <view id="addAddressText">新增地址</view>
+</view>
+<view style="height: 100rpx;" ></view>

@@ -1,0 +1,74 @@
+<!-- 个人活动详情页 -->
+<view>
+  <!--用户信息框-->
+  <view id="userInforModule">
+    <!--头像-->
+    <image id="avater" src="{{DetailActivity.userInfo[0]}}"></image>
+    <!--用户具体信息-->
+    <view id="UserDetail">
+      <view id="userName">{{DetailActivity.userInfo[1]}}</view>
+      <!--用户是否实名认证 活动是否开始 活动类型  -->
+      <view id="userDetail_one">
+        <view id="OrRealName" style="display: {{publisher.orAttestation==true?'block':'none'}};">已实名认证</view>
+        <view id="OrRealName" style="display: {{publisher.orAttestation==true?'none':'block'}};">未实名认证</view>
+        <view id="state" style="display: {{DetailActivity.activityState==0?'block':'none'}};">报名中</view>
+        <view id="state" style="display: {{DetailActivity.activityState==1?'block':'none'}};">已结束</view>
+        <view id="typeBox" style="display: {{DetailActivity.activityType==0?'block':'none'}};">
+          <view id="typeText">个人组织</view>
+        </view>
+        <view id="typeBox" style="display: {{DetailActivity.activityType==1?'block':'none'}};">
+          <view id="typeText">商家活动</view>
+        </view>
+      </view>
+      <!--活动时间-->
+      <view id="activityTime">
+        活动时间:{{DetailActivity.activityDate}}
+      </view>
+    </view>
+  </view>
+  <!--活动标签-->
+  <view id="labelBox">
+    <view class="labelText" wx:key="index" wx:for="{{DetailActivity.activityTitle}}">#{{item}}</view>
+  </view>
+  <!--活动地址-->
+  <view id="addressBox" >
+    <image id="addressIcon" src="/image/定位.png"></image>
+    <view id="addressText">{{DetailActivity.activityToTalAddress}}</view>
+  </view>
+  <!--活动介绍 模块-->
+  <view id="introduceBox">
+    <view id="interduceText">活动概况</view>
+    <view id="interduceModul">
+      <mp-html id="interduceContent" content="{{DetailActivity.activityOverview}}" />
+    </view>
+  </view>
+  <!--详细内容 模块-->
+  <view id="detailBox">
+    <view id="detailText">活动要求</view>
+    <view id="detailModul">
+      <mp-html id="detailContent" content="{{DetailActivity.activityRequest}}" />
+    </view>
+  </view>
+  <!--私聊 按钮-->
+  <view id="chatBox">
+    <view id="chatText" bindtap="openRiskNotice">私聊</view>
+  </view>
+  <view id="dd"></view>
+</view>
+
+<!-- 遮罩层 -->
+<view id="MaskLayer" style="display: {{OrHidden==true?'block':'none'}};"></view>
+<!-- 风险告知书 -->
+<view id="RiskNoticeBox" style="display: {{OrCancleRiskNotice==true?'block':'none'}};" >
+  <view id="RiskNotice_top">
+    <view id="top_title">风险告知书</view>
+    <image id="top_icon" src="/image/关闭.png" bindtap="cancle"></image>
+  </view>
+  <!-- 风险告知书内容 -->
+  <view id="RiskNoticeContent_one">亲爱的用户:</view>
+  <view id="RiskNoticeContent_two">{{RiskNotice.content}}</view>
+  <view id="RiskNoticeContent_three">平台管理员</view>
+  <view id="knowButton">
+    <view id="knowText" bindtap="goCall">已知晓</view>
+  </view>
+</view>
